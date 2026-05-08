@@ -27,9 +27,9 @@ Coldwriter
 ## 🖼️ Gallery
 
 <p align="center">
-<img src="./.github/assets/vaultshot (2).png" style="margin-bottom: 15px;"/> <br>
-<img src="./.github/assets/vaultshot (3).png" style="margin-bottom: 15px;"/> <br>
-<img src="./.github/assets/vaultshot (1).png" style="margin-bottom: 15px;"/> <br>
+<img src="./.github/assets/vaultshot vaultshot 1.png" style="margin-bottom: 15px;"/> <br>
+<img src="./.github/assets/vaultshot 2.png" style="margin-bottom: 15px;"/> <br>
+<img src="./.github/assets/vaultshot 3.png" style="margin-bottom: 15px;"/> <br>
 Screenshots last updated <b>2026-05-08</b>
 </p>
 
