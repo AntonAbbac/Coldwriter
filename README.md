@@ -27,9 +27,9 @@ Coldwriter
 ## 🖼️ Gallery
 
 <p align="center">
-<img src="./.github/assets/vaultshot 1.png" style="margin-bottom: 15px;"/> <br>
-<img src="./.github/assets/vaultshot 2.png" style="margin-bottom: 15px;"/> <br>
-<img src="./.github/assets/vaultshot 3.png" style="margin-bottom: 15px;"/> <br>
+<img src="./.github/assets/vaultshot (2).png" style="margin-bottom: 15px;"/> <br>
+<img src="./.github/assets/vaultshot (3).png" style="margin-bottom: 15px;"/> <br>
+<img src="./.github/assets/vaultshot (1).png" style="margin-bottom: 15px;"/> <br>
 Screenshots last updated <b>2026-05-08</b>
 </p>
 
@@ -41,9 +41,8 @@ Screenshots last updated <b>2026-05-08</b>
 > **Coldwriter** is a structured **Vault** designed as a foundation for learning **writing** and working with **Obsidian**.
 > It is built to support:
 >
-> - Development of long-form manuscripts
+> - Development of long-form manuscripts and long texts
 > - Journaling, studying, and writing practice
-> - Writing long texts and producing books
 > - Friction-free daily use
 
 ### 📖 Vault Systems
@@ -150,7 +149,7 @@ The system is ready to use.
 
 ## ☃️ Credits
 
-Individual project developed for entry-level to intermediate Obsidian users.
+A personal project created with great admiration, intended for Obsidian users.
 
 ---
 
