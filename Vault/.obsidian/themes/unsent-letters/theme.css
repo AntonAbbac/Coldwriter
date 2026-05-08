@@ -1,0 +1,299 @@
+/* @settings
+
+name: Unsent Letters
+id: unsent-letters
+settings:
+
+  - id: ul-base-bg
+    title: Base Background Color
+    description: Primary background of the editor
+    type: variable-color
+    opacity: true
+    format: hex
+    default: '#15202c'
+
+  - id: ul-accent-color
+    title: Accent Color
+    description: Links, checkboxes, cursor, and accent text
+    type: variable-color
+    opacity: true
+    format: hex
+    default: '#afcfef'
+
+  - id: ul-text-normal
+    title: Body Text Color
+    description: Main reading text in the editor
+    type: variable-color
+    opacity: true
+    format: hex
+    default: '#dcecfc'
+
+  - id: ul-font-size
+    title: Font Size
+    description: Base text size in the editor (px)
+    type: variable-number-slider
+    default: 17
+    min: 13
+    max: 24
+    step: 1
+    format: px
+
+  - id: ul-line-height
+    title: Line Height
+    description: Spacing between lines of text
+    type: variable-number-slider
+    default: 1.9
+    min: 1.4
+    max: 2.8
+    step: 0.1
+
+  - id: ul-max-width
+    title: Content Max Width
+    description: Maximum width of the text column (px)
+    type: variable-number-slider
+    default: 780
+    min: 480
+    max: 1400
+    step: 20
+    format: px
+
+  - id: ul-border-radius
+    title: Border Radius
+    description: Corner rounding for panels and code blocks (px)
+    type: variable-number-slider
+    default: 14
+    min: 0
+    max: 28
+    step: 2
+    format: px
+
+  - id: ul-backdrop-blur
+    title: Panel Blur
+    description: Blur intensity on side panels (px)
+    type: variable-number-slider
+    default: 10
+    min: 0
+    max: 30
+    step: 2
+    format: px
+
+  - id: ul-transition-speed
+    title: Transition Speed
+    description: Duration of hover and focus animations (ms)
+    type: variable-number-slider
+    default: 120
+    min: 0
+    max: 400
+    step: 20
+    format: ms
+
+  - id: ul-letter-spacing
+    title: Letter Spacing
+    description: Letter-spacing for body text (em)
+    type: variable-number-slider
+    default: 0.015
+    min: 0
+    max: 0.1
+    step: 0.005
+
+*/
+
+/* ════════════════════════════════════════════════════
+   UNSENT LETTERS — Obsidian Theme
+   Fallback variables (used when Style Settings is absent)
+   ════════════════════════════════════════════════════ */
+
+:root {
+  --ul-base-bg:          #15202c;
+  --ul-accent-color:     #afcfef;
+  --ul-text-normal:      #dcecfc;
+  --ul-font-size:        17px;
+  --ul-line-height:      1.9;
+  --ul-max-width:        780px;
+  --ul-border-radius:    14px;
+  --ul-backdrop-blur:    10px;
+  --ul-transition-speed: 120ms;
+  --ul-letter-spacing:   0.015em;
+}
+
+/* ════════════════════════════════════════════════════
+   BASE PALETTE
+   Derived from --ul-base-bg and --ul-accent-color
+   ════════════════════════════════════════════════════ */
+
+.theme-dark {
+
+  /* — Backgrounds — */
+  --background-primary:               var(--ul-base-bg);
+  --background-primary-alt:           #192736;
+  --background-secondary:             #1c2d3f;
+  --background-secondary-alt:         #22364b;
+  --background-modifier-hover:        rgba(175, 207, 239, 0.08);
+  --background-modifier-active-hover: rgba(175, 207, 239, 0.14);
+
+  /* — Text — */
+  --text-normal:       var(--ul-text-normal);
+  --text-muted:        rgba(180, 203, 227, 0.72);
+  --text-faint:        rgba(145, 171, 199, 0.55);
+  --text-accent:       var(--ul-accent-color);
+  --text-accent-hover: rgba(217, 238, 255, 0.95);
+
+  /* — Interactive — */
+  --interactive-accent:       var(--ul-accent-color);
+  --interactive-accent-hover: rgba(217, 238, 255, 0.95);
+
+  /* — Borders — */
+  --background-modifier-border:       rgba(79, 121, 168, 0.35);
+  --background-modifier-border-hover: rgba(175, 207, 239, 0.45);
+
+  /* — Inline highlights — */
+  --text-highlight-bg: rgba(127, 174, 219, 0.22);
+  --bold-color:        rgba(217, 238, 255, 0.98);
+  --italic-color:      rgba(190, 220, 248, 0.88);
+
+  /* — Links — */
+  --link-color:          var(--ul-accent-color);
+  --link-color-hover:    rgba(217, 238, 255, 1);
+  --link-external-color: rgba(190, 225, 255, 0.9);
+
+  /* — Checkbox — */
+  --checkbox-color:        var(--ul-accent-color);
+  --checkbox-color-hover:  rgba(217, 238, 255, 1);
+  --checkbox-border-color: rgba(79, 121, 168, 0.65);
+
+  /* — Caret — */
+  --caret-color: rgba(217, 238, 255, 1);
+
+  /* — Inline code — */
+  --code-normal:     rgba(217, 238, 255, 0.92);
+  --code-background: rgba(127, 174, 219, 0.10);
+
+  /* — Scrollbar — */
+  --scrollbar-bg:              rgba(127, 174, 219, 0.08);
+  --scrollbar-thumb-bg:        rgba(127, 174, 219, 0.35);
+  --scrollbar-active-thumb-bg: rgba(175, 207, 239, 0.55);
+}
+
+/* ════════════════════════════════════════════════════
+   FOCUSED WRITING
+   ════════════════════════════════════════════════════ */
+
+.markdown-source-view.mod-cm6 .cm-content,
+.markdown-preview-view {
+  max-width:      var(--ul-max-width);
+  margin:         auto;
+  line-height:    var(--ul-line-height);
+  font-size:      var(--ul-font-size);
+  letter-spacing: var(--ul-letter-spacing);
+}
+
+/* ════════════════════════════════════════════════════
+   PANELS
+   ════════════════════════════════════════════════════ */
+
+.workspace-leaf,
+.workspace-tab-header,
+.side-dock-settings {
+  background:      rgba(127, 174, 219, 0.05);
+  backdrop-filter: blur(var(--ul-backdrop-blur));
+}
+
+/* ════════════════════════════════════════════════════
+   TABS
+   ════════════════════════════════════════════════════ */
+
+.workspace-tab-header {
+  border-bottom: 1px solid rgba(79, 121, 168, 0.25);
+}
+
+.workspace-tab-header.is-active {
+  background:    rgba(127, 174, 219, 0.18);
+  box-shadow:    0 0 12px rgba(217, 238, 255, 0.18);
+  border-radius: var(--ul-border-radius) var(--ul-border-radius) 0 0;
+}
+
+/* ════════════════════════════════════════════════════
+   SIDEBAR
+   ════════════════════════════════════════════════════ */
+
+.workspace-split.mod-left-split,
+.workspace-split.mod-right-split {
+  background: linear-gradient(
+    180deg,
+    rgba(25, 39, 54, 1)  0%,
+    rgba(20, 32, 45, 1) 100%
+  );
+}
+
+/* ════════════════════════════════════════════════════
+   CODE BLOCKS
+   ════════════════════════════════════════════════════ */
+
+.markdown-rendered pre,
+.cm-s-obsidian .HyperMD-codeblock {
+  background:    rgba(127, 174, 219, 0.08);
+  border:        1px solid rgba(79, 121, 168, 0.25);
+  border-radius: var(--ul-border-radius);
+  box-shadow:    0 0 14px rgba(217, 238, 255, 0.05);
+}
+
+/* ════════════════════════════════════════════════════
+   HEADINGS
+   ════════════════════════════════════════════════════ */
+
+.cm-header-1,
+.markdown-rendered h1 {
+  color:          rgba(217, 238, 255, 1);
+  font-weight:    700;
+  letter-spacing: 0.03em;
+}
+
+.cm-header-2,
+.markdown-rendered h2 { color: rgba(200, 228, 252, 0.96); }
+
+.cm-header-3,
+.markdown-rendered h3 { color: rgba(185, 215, 242, 0.90); }
+
+/* ════════════════════════════════════════════════════
+   ICEBERG EFFECT
+   ════════════════════════════════════════════════════ */
+
+.workspace-leaf-content,
+.view-content,
+.markdown-preview-view,
+.cm-editor {
+  box-shadow:
+    inset 0 0 0 1px rgba(79, 121, 168, 0.12),
+    0 0 30px rgba(217, 238, 255, 0.03);
+}
+
+/* ════════════════════════════════════════════════════
+   TEXT SELECTION
+   ════════════════════════════════════════════════════ */
+
+::selection {
+  background: rgba(175, 207, 239, 0.25);
+  color:      rgba(240, 248, 255, 1);
+}
+
+/* ════════════════════════════════════════════════════
+   STATUS BAR
+   ════════════════════════════════════════════════════ */
+
+.status-bar {
+  background: rgba(127, 174, 219, 0.08);
+  border-top: 1px solid rgba(79, 121, 168, 0.18);
+  color:      rgba(200, 225, 248, 0.78);
+}
+
+/* ════════════════════════════════════════════════════
+   TRANSITIONS
+   ════════════════════════════════════════════════════ */
+
+* {
+  transition:
+    background-color var(--ul-transition-speed) ease,
+    border-color     var(--ul-transition-speed) ease,
+    color            var(--ul-transition-speed) ease,
+    box-shadow       calc(var(--ul-transition-speed) + 40ms) ease;
+}

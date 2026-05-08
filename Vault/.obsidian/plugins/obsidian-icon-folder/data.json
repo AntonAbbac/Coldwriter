@@ -1,0 +1,52 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "twemoji",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "LiSunSnow",
+      "FasPerson",
+      "LiNotebook",
+      "RaFrostEmblem",
+      "SiIced",
+      "RiAttachment2",
+      "LiArchive",
+      "LiBookCopy"
+    ],
+    "recentlyUsedIconsSize": 8,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false,
+    "useInternalPlugins": false
+  },
+  "Personal": "LiBookUser",
+  "Projects": "LiBookCopy",
+  "Research": "CoFileSearch",
+  "Scratch": "LiNotebookPen",
+  "Icebox": "SiSnowpack",
+  "Coldbox": "LiSnowflake",
+  "Icebox/Archives": "LiArchive",
+  "Icebox/Attachments": "RiAttachment2",
+  "Icebox/Templates": "SiIced",
+  "Personal/Daily": "RaFrostEmblem",
+  "Personal/Study": "LiNotebook",
+  "Personal/Workout": "FasPerson"
+}
