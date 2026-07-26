@@ -3,19 +3,16 @@
     "migrated": 6,
     "iconPacksPath": ".obsidian/icons",
     "fontSize": 16,
-    "emojiStyle": "twemoji",
+    "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "LiSunSnow",
-      "FasPerson",
-      "LiNotebook",
-      "RaFrostEmblem",
-      "SiIced",
-      "RiAttachment2",
-      "LiArchive",
-      "LiBookCopy"
+      "LiPenTool",
+      "LiPersonStanding",
+      "LiBoxes",
+      "LiBrain",
+      "LiNotebook"
     ],
-    "recentlyUsedIconsSize": 8,
+    "recentlyUsedIconsSize": 5,
     "rules": [],
     "extraMargin": {
       "top": 0,
@@ -37,16 +34,9 @@
     "debugMode": false,
     "useInternalPlugins": false
   },
-  "Personal": "LiBookUser",
-  "Projects": "LiBookCopy",
-  "Research": "CoFileSearch",
-  "Scratch": "LiNotebookPen",
-  "Icebox": "SiSnowpack",
-  "Coldbox": "LiSnowflake",
-  "Icebox/Archives": "LiArchive",
-  "Icebox/Attachments": "RiAttachment2",
-  "Icebox/Templates": "SiIced",
-  "Personal/Daily": "RaFrostEmblem",
-  "Personal/Study": "LiNotebook",
-  "Personal/Workout": "FasPerson"
+  "00 System": "LiToolCase",
+  "10 Journal": "LiNotebook",
+  "20 Brain": "LiBrain",
+  "30 Projects": "LiBoxes",
+  "40 Writing": "LiPenTool"
 }

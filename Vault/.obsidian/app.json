@@ -1,14 +1,6 @@
 {
-  "alwaysUpdateLinks": true,
-  "newFileLocation": "folder",
-  "newFileFolderPath": "Coldbox",
-  "attachmentFolderPath": "Icebox/Attachments",
-  "showUnsupportedFiles": true,
-  "trashOption": "local",
   "mobileToolbarCommands": [
-    "obsidian-tasks-plugin:edit-task",
     "obsidian-linter:lint-file",
-    "editor:insert-table",
     "editor:undo",
     "editor:redo",
     "editor:insert-wikilink",
@@ -30,5 +22,12 @@
     "editor:unindent-list",
     "editor:configure-toolbar"
   ],
-  "mobileQuickRibbonItem": "quickadd:QuickAdd"
+  "livePreview": true,
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "20 Brain/Ideas",
+  "attachmentFolderPath": "00 System/Attachments",
+  "vimMode": false,
+  "openBehavior": "file:00 System/Dashboards/Main Dashboard"
 }

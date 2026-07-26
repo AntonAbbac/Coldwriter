@@ -1,0 +1,2770 @@
+/* ===== SETTINGS STYLES ===== */
+
+.advancedNoteMover-settings-hint {
+  font-size: 0.9em;
+  color: var(--text-muted);
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+/* Search Input Styles */
+.advancedNoteMover-search {
+  width: calc(100% - 20px);
+}
+
+/* ===== COMMON MODAL STYLES ===== */
+
+/* Consistent vertical rhythm for plugin modals */
+.note-mover-preview-modal,
+.note-mover-update-modal,
+.note-mover-history-modal,
+.advancedNoteMover-confirm-modal,
+.advancedNoteMover-conflict-modal,
+.advancedNoteMover-conflict-skip-cache-modal {
+  padding: 20px 0 20px 0;
+  box-sizing: border-box;
+}
+
+/* Desktop modal dimensions: applied inline on modalEl in BaseModal.ts (classes scope layout only). */
+
+/* Common Modal Title Styles */
+.advancedNoteMover-modal-title-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.advancedNoteMover-modal-title-icon {
+  font-size: 2em;
+  line-height: 1;
+}
+
+.advancedNoteMover-modal-title {
+  margin: 0;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: var(--text-normal);
+}
+
+.advancedNoteMover-modal-subtitle {
+  margin: 0 0 24px 0;
+  color: var(--text-muted);
+  font-size: 1.1em;
+}
+
+/* Common Button Container Styles */
+.advancedNoteMover-modal-button-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: auto;
+}
+
+.advancedNoteMover-modal-button-container > .mod-button {
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+/* Legacy: mobile footers still using Setting wrappers */
+.advancedNoteMover-modal-button-container .setting-item,
+.advancedNoteMover-modal-footer-mobile .setting-item {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.advancedNoteMover-modal-button-container .setting-item-info {
+  display: none;
+}
+
+.advancedNoteMover-modal-button-container .setting-item-control {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+.note-mover-preview-modal .advancedNoteMover-modal-footer,
+.note-mover-history-modal .advancedNoteMover-modal-footer {
+  align-items: center;
+}
+
+/* Common Section Styles */
+.advancedNoteMover-modal-section {
+  margin-bottom: 24px;
+}
+
+.advancedNoteMover-modal-section:last-child {
+  margin-bottom: 16px;
+}
+
+.advancedNoteMover-modal-section-header {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.advancedNoteMover-modal-section-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Common Footer Styles */
+.advancedNoteMover-modal-footer {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid var(--background-modifier-border);
+  padding-top: 16px;
+  margin-top: 24px;
+}
+
+/* Update Modal Footer - Centered links, right-aligned button */
+.note-mover-update-modal .advancedNoteMover-modal-footer {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-mover-update-modal .advancedNoteMover-update-modal-links {
+  flex: 1;
+  text-align: center;
+}
+
+.note-mover-update-modal .advancedNoteMover-modal-button-container {
+  flex-shrink: 0;
+}
+
+/* Common List Styles */
+.advancedNoteMover-modal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.advancedNoteMover-modal-list-item {
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+}
+
+/* Common Empty State Styles */
+.advancedNoteMover-modal-empty {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--text-muted);
+  font-size: 1.1em;
+  background: var(--background-secondary);
+  border-radius: 8px;
+  margin: 24px 0;
+}
+
+/* Common Info Box Styles */
+.advancedNoteMover-modal-info-box {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  background: var(--background-secondary);
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-border);
+}
+
+.advancedNoteMover-modal-info-row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 0.9em;
+  color: var(--text-normal);
+  opacity: 0.8;
+}
+
+.advancedNoteMover-modal-info-row span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.advancedNoteMover-modal-info-row code {
+  background: var(--background-primary);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+/* Time Filter Container */
+.advancedNoteMover-time-filter-container {
+  margin-bottom: 20px;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.advancedNoteMover-time-filter-container .setting-item {
+  margin-bottom: 0;
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+.advancedNoteMover-time-filter-container .setting-item-name {
+  font-weight: 600;
+  color: var(--text-normal);
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.advancedNoteMover-time-filter-container .setting-item-control {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 16px;
+}
+
+/* Retention Policy Settings - Inline layout */
+.advancedNoteMover-settings-root
+  .setting-item
+  .setting-item-control
+  input.advancedNoteMover-retention-value-input {
+  width: 80px;
+  margin-right: 8px;
+}
+
+.advancedNoteMover-settings-root
+  .setting-item
+  .setting-item-control
+  select.advancedNoteMover-retention-unit-dropdown {
+  width: 100px;
+}
+
+.advancedNoteMover-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.advancedNoteMover-history-entry:first-child {
+  margin-top: 0;
+  border-top: none;
+}
+
+.advancedNoteMover-history-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--background-modifier-border);
+  background: none;
+  box-sizing: border-box;
+  gap: 16px;
+}
+
+.advancedNoteMover-history-entry:last-child {
+  border-bottom: none;
+}
+
+.advancedNoteMover-history-entry-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.advancedNoteMover-history-entry-info {
+  font-weight: 600;
+  font-size: 1em;
+  color: var(--text-normal);
+  margin-bottom: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.advancedNoteMover-history-entry-paths {
+  color: var(--text-normal);
+  opacity: 0.78;
+  font-size: 0.92em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.note-mover-history-title {
+  margin: 0 0 16px 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: left;
+  color: var(--text-normal);
+}
+
+/* Bulk Operation Styles */
+.advancedNoteMover-history-entry.advancedNoteMover-bulk-operation {
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 16px 24px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.advancedNoteMover-history-entry.advancedNoteMover-single-operation {
+  border-left: 3px solid var(--interactive-accent);
+}
+
+.advancedNoteMover-bulk-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.advancedNoteMover-bulk-operation-info {
+  font-weight: 600;
+  font-size: 1.1em;
+  color: var(--text-normal);
+}
+
+.advancedNoteMover-bulk-details {
+  margin-top: 8px;
+}
+
+.advancedNoteMover-bulk-details summary {
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 0.9em;
+  margin-bottom: 8px;
+  user-select: none;
+}
+
+.advancedNoteMover-bulk-details summary:hover {
+  color: var(--text-normal);
+}
+
+.advancedNoteMover-bulk-files-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-left: 0;
+  padding-top: 0;
+}
+
+/* Bulk file entries use the same styling as regular history entries */
+.advancedNoteMover-history-entry.advancedNoteMover-bulk-file-entry {
+  background: var(--background-primary);
+  border-left: 2px solid var(--background-modifier-border);
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--background-modifier-border-hover);
+}
+
+.advancedNoteMover-changelog-container {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 24px;
+  background: var(--background-secondary);
+}
+
+.advancedNoteMover-changelog-version {
+  margin-bottom: 24px;
+}
+
+.advancedNoteMover-changelog-version:last-child {
+  margin-bottom: 0;
+}
+
+.advancedNoteMover-changelog-version-title {
+  margin: 0 0 12px 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--text-accent);
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 6px;
+}
+
+.advancedNoteMover-changelog-section {
+  margin-bottom: 16px;
+}
+
+.advancedNoteMover-changelog-section:last-child {
+  margin-bottom: 0;
+}
+
+.advancedNoteMover-changelog-section-title {
+  margin: 0 0 8px 0;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--text-normal);
+}
+
+.advancedNoteMover-changelog-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-normal);
+}
+
+.advancedNoteMover-changelog-list li {
+  margin-bottom: 4px;
+}
+
+.advancedNoteMover-changelog-list li:last-child {
+  margin-bottom: 0;
+}
+
+.advancedNoteMover-update-modal-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advancedNoteMover-update-modal-github-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.2s ease;
+}
+
+.advancedNoteMover-update-modal-github-link:hover {
+  color: var(--text-accent);
+  text-decoration: underline;
+}
+
+.advancedNoteMover-no-changelog-text {
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.advancedNoteMover-preview-section {
+  margin-bottom: 24px;
+}
+
+.advancedNoteMover-preview-section:last-child {
+  margin-bottom: 16px;
+}
+
+.advancedNoteMover-preview-section-success
+  .advancedNoteMover-modal-section-header
+  h3 {
+  color: var(--text-success);
+}
+
+.advancedNoteMover-preview-section-blocked
+  .advancedNoteMover-modal-section-header
+  h3 {
+  color: var(--text-error);
+}
+
+.advancedNoteMover-modal-list-item.advancedNoteMover-preview-item-success {
+  border-left: 3px solid var(--text-success);
+  background: var(--background-primary-alt);
+}
+
+.advancedNoteMover-modal-list-item.advancedNoteMover-preview-item-blocked {
+  border-left: 3px solid var(--text-error);
+  background: var(--background-primary-alt);
+}
+
+.advancedNoteMover-preview-item-main {
+  margin-bottom: 8px;
+}
+
+.advancedNoteMover-preview-item-filename {
+  font-weight: 600;
+  font-size: 1em;
+  color: var(--text-normal);
+  margin-bottom: 4px;
+}
+
+.advancedNoteMover-preview-item-paths {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-monospace);
+  font-size: 0.85em;
+}
+
+.advancedNoteMover-current-path {
+  color: var(--text-normal);
+  opacity: 0.78;
+}
+
+.advancedNoteMover-arrow {
+  color: var(--text-accent);
+  font-weight: bold;
+}
+
+.advancedNoteMover-target-path {
+  color: var(--text-success);
+  font-weight: 600;
+}
+
+.advancedNoteMover-preview-item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9em;
+}
+
+.advancedNoteMover-preview-item-rule,
+.advancedNoteMover-preview-item-block-reason,
+.advancedNoteMover-preview-item-blocking-filter,
+.advancedNoteMover-preview-item-tags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.advancedNoteMover-rule-label,
+.advancedNoteMover-block-reason-label,
+.advancedNoteMover-filter-label,
+.advancedNoteMover-tags-label {
+  font-weight: 500;
+  color: var(--text-muted);
+  min-width: 60px;
+}
+
+.advancedNoteMover-preview-item-rule code,
+.advancedNoteMover-preview-item-blocking-filter code {
+  background: var(--background-secondary);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  color: var(--text-normal);
+}
+
+.advancedNoteMover-preview-item-block-reason {
+  color: var(--text-error);
+}
+
+.advancedNoteMover-tag {
+  display: inline-block;
+  background: var(--background-modifier-border);
+  color: var(--text-muted);
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  margin-right: 4px;
+}
+
+/* Confirm Modal Styles */
+.advancedNoteMover-confirm-modal {
+  padding: 24px 0 16px 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.advancedNoteMover-confirm-modal .advancedNoteMover-modal-title {
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.advancedNoteMover-confirm-modal-message {
+  margin: 0 0 24px 0;
+  color: var(--text-muted);
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.advancedNoteMover-confirm-modal .advancedNoteMover-modal-button-container {
+  border-top: 1px solid var(--background-modifier-border);
+  padding-top: 16px;
+}
+
+.advancedNoteMover-confirm-modal
+  .advancedNoteMover-modal-button-container
+  button {
+  min-width: 80px;
+}
+
+/* Conflict Modal Styles */
+.advancedNoteMover-conflict-modal {
+  padding: 24px 0 16px 0;
+}
+
+.advancedNoteMover-conflict-modal-message {
+  margin: 0 0 16px 0;
+  color: var(--text-muted);
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.advancedNoteMover-conflict-modal-warning {
+  margin-bottom: 8px;
+}
+
+.advancedNoteMover-conflict-modal-warning-text {
+  margin: 0 0 12px 0;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.advancedNoteMover-conflict-modal .advancedNoteMover-modal-button-container {
+  border-top: 1px solid var(--background-modifier-border);
+  padding-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.advancedNoteMover-conflict-settings-warning .mod-warning,
+.advancedNoteMover-conflict-modal-warning-text.mod-warning {
+  color: var(--text-error);
+}
+
+.advancedNoteMover-conflict-skip-cache-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.advancedNoteMover-conflict-skip-cache-item {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.advancedNoteMover-conflict-skip-cache-skipped-at {
+  margin-top: 8px;
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+.advancedNoteMover-conflict-skip-cache-item .setting-item {
+  border-top: none;
+  padding: 8px 0 0 0;
+}
+
+/* ===== DRAG & DROP STYLES ===== */
+
+/* Drag Handle Styles */
+.advancedNoteMover-drag-handle {
+  cursor: grab;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+  color: var(--text-muted);
+  padding: 2px 4px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advancedNoteMover-drag-handle:hover {
+  opacity: 1;
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+.advancedNoteMover-drag-handle:active {
+  cursor: grabbing;
+}
+
+.advancedNoteMover-drag-handle:focus-visible {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: 2px;
+}
+
+/* Dragging State Styles */
+.setting-item.advancedNoteMover-dragging {
+  opacity: 0.5;
+  transform: rotate(1deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  position: relative;
+}
+
+.advancedNoteMover-rules-v2-container .setting-item.advancedNoteMover-drag-over,
+.setting-item.advancedNoteMover-with-drag-handle.advancedNoteMover-drag-over {
+  border-top: 2px solid var(--interactive-accent);
+  background: var(--background-modifier-hover);
+}
+
+.advancedNoteMover-rules-v2-container
+  .setting-item.advancedNoteMover-drag-over-top,
+.setting-item.advancedNoteMover-with-drag-handle.advancedNoteMover-drag-over-top {
+  border-top: 2px solid var(--interactive-accent);
+}
+
+.advancedNoteMover-rules-v2-container
+  .setting-item.advancedNoteMover-drag-over-bottom,
+.setting-item.advancedNoteMover-with-drag-handle.advancedNoteMover-drag-over-bottom {
+  border-bottom: 2px solid var(--interactive-accent);
+}
+
+/* Drag Handle Container */
+.advancedNoteMover-drag-handle-container {
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+  flex-shrink: 0;
+}
+
+/* Setting Item with Drag Handle */
+.setting-item.advancedNoteMover-with-drag-handle {
+  display: flex;
+  align-items: center;
+}
+
+.setting-item.advancedNoteMover-with-drag-handle .setting-item-info {
+  flex: 1;
+}
+
+.setting-item.advancedNoteMover-with-drag-handle .setting-item-control {
+  flex-shrink: 0;
+}
+
+/* ===== RULE V2 STYLES ===== */
+
+.advancedNoteMover-rules-v2-container .setting-item {
+  padding: 0;
+}
+
+.advancedNoteMover-rule-v2-custom-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+
+.advancedNoteMover-rule-v2-name {
+  flex: 1;
+  padding: 0;
+  font-weight: 500;
+  color: var(--text-normal);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.advancedNoteMover-rule-v2-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.advancedNoteMover-rule-v2-actions .setting-item-control {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.advancedNoteMover-rule-v2-actions .advancedNoteMover-drag-handle-container {
+  margin-left: 4px;
+}
+
+/* ===== RULE EDITOR MODAL STYLES ===== */
+
+/* Desktop: content-sized height (avoid stretched empty space) */
+.modal-container.advancedNoteMover-modal-size-large
+  > .modal-content.advancedNoteMover-rule-editor-modal,
+.modal-container.advancedNoteMover-modal-size-medium
+  > .modal-content.advancedNoteMover-rule-editor-modal,
+.modal-container.advancedNoteMover-modal-size-small
+  > .modal-content.advancedNoteMover-rule-editor-modal {
+  height: auto;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.advancedNoteMover-rule-editor-modal .setting-item {
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Rule Editor - Full width inputs */
+.advancedNoteMover-rule-editor-modal .setting-item-control {
+  flex: 1;
+  min-width: 0;
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.advancedNoteMover-rule-editor-modal .setting-item-control input[type='text'],
+.advancedNoteMover-rule-editor-modal
+  .setting-item-control
+  .search-input-container {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+}
+
+.advancedNoteMover-rule-destination-description {
+  flex: 0 0 100%;
+  width: 100%;
+  margin: 4px 0 0 0;
+  font-size: var(--font-ui-small);
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.advancedNoteMover-rule-editor-separator {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid var(--background-modifier-border);
+}
+
+.advancedNoteMover-rule-aggregation-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.advancedNoteMover-rule-aggregation-button {
+  padding: 6px 16px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  color: var(--text-normal);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.advancedNoteMover-rule-aggregation-button:hover {
+  background: var(--background-modifier-hover);
+}
+
+.advancedNoteMover-rule-aggregation-button.is-active {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+  border-color: var(--interactive-accent);
+}
+
+.advancedNoteMover-rule-aggregation-button:focus-visible {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: 2px;
+}
+
+.advancedNoteMover-rule-conditions-section {
+  margin: 16px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.advancedNoteMover-rule-conditions-title {
+  margin: 0 0 12px 0;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.advancedNoteMover-rule-triggers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.advancedNoteMover-rule-trigger-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: var(--background-secondary);
+  border-radius: 4px;
+  border: 1px solid var(--background-modifier-border);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.advancedNoteMover-rule-trigger-row.advancedNoteMover-dragging {
+  opacity: 0.5;
+}
+
+.advancedNoteMover-rule-trigger-row.advancedNoteMover-drag-over-top {
+  border-top: 2px solid var(--interactive-accent);
+}
+
+.advancedNoteMover-rule-trigger-row.advancedNoteMover-drag-over-bottom {
+  border-bottom: 2px solid var(--interactive-accent);
+}
+
+.advancedNoteMover-rule-trigger-row .advancedNoteMover-drag-handle-container {
+  flex-shrink: 0;
+}
+
+.advancedNoteMover-rule-trigger-delete-btn {
+  flex-shrink: 0;
+  padding: 4px;
+  cursor: pointer;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advancedNoteMover-rule-trigger-delete-btn:hover {
+  color: var(--text-error);
+  background: var(--background-modifier-hover);
+}
+
+.advancedNoteMover-rule-trigger-delete-btn:focus-visible {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: 2px;
+}
+
+.advancedNoteMover-rule-trigger-delete-btn svg {
+  flex-shrink: 0;
+}
+
+.advancedNoteMover-rule-criteria-type,
+.advancedNoteMover-rule-rule-type {
+  padding: 6px 8px;
+  min-width: 150px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.advancedNoteMover-rule-criteria-type:focus,
+.advancedNoteMover-rule-rule-type:focus {
+  outline: none;
+}
+
+.advancedNoteMover-rule-criteria-type:focus-visible,
+.advancedNoteMover-rule-rule-type:focus-visible {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: 2px;
+  border-color: var(--interactive-accent);
+}
+
+.advancedNoteMover-rule-trigger-value {
+  flex: 1;
+  padding: 6px 8px;
+  background: transparent;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  color: var(--text-normal);
+}
+
+.advancedNoteMover-rule-trigger-value:hover {
+  background: var(--background-modifier-hover);
+}
+
+.advancedNoteMover-rule-trigger-value:focus {
+  outline: none;
+}
+
+.advancedNoteMover-rule-trigger-value:focus-visible {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: 2px;
+  border-color: var(--interactive-accent);
+  background: var(--background-primary);
+}
+
+.advancedNoteMover-rule-editor-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  padding-bottom: 4px;
+  border-top: 1px solid var(--background-modifier-border);
+  flex-shrink: 0;
+  position: sticky;
+  bottom: 0;
+  background: var(--background-primary);
+  z-index: 2;
+}
+
+.advancedNoteMover-rule-editor-footer-left,
+.advancedNoteMover-rule-editor-footer-right {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.advancedNoteMover-rule-editor-footer-left
+  .advancedNoteMover-modal-button-container {
+  justify-content: flex-start;
+}
+
+.advancedNoteMover-rule-editor-footer-right
+  .advancedNoteMover-modal-button-container {
+  justify-content: flex-end;
+}
+
+/* Property Suggestions */
+.advancedNoteMover-property-suggestion {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 8px;
+}
+
+.advancedNoteMover-property-name {
+  font-weight: 500;
+  color: var(--text-normal);
+}
+
+.advancedNoteMover-property-meta {
+  font-size: 0.85em;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Property Value Suggestions */
+.advancedNoteMover-property-value-suggestion {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 8px;
+}
+
+.advancedNoteMover-property-value-text {
+  font-weight: 500;
+  color: var(--text-normal);
+}
+
+.advancedNoteMover-property-value-type {
+  font-size: 0.85em;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Property Name Field - Expand when no value field */
+.advancedNoteMover-rule-property-name {
+  flex: 1;
+  min-width: 0;
+}
+
+.advancedNoteMover-rule-property-name:focus-visible {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: 2px;
+}
+
+/* When no value field is present, property name should fill available space */
+.advancedNoteMover-rule-trigger-row.advancedNoteMover-no-value-field
+  .advancedNoteMover-rule-property-name {
+  flex: 1;
+  width: 100%;
+}
+
+/* ===== NOTICE STYLES ===== */
+
+/* Undo Button Styles */
+.advancedNoteMover-notice-undo-button {
+  margin-left: 10px;
+}
+
+/* ===== MOBILE RESPONSIVE STYLES ===== */
+
+/* Mobile-First Settings Container */
+.advancedNoteMover-mobile-settings-container {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure parent container allows scrolling - scoped to plugin only */
+body.is-mobile .vertical-tab-content.advancedNoteMover-settings-vertical-tab {
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+
+/* Ensure settings container doesn't interfere with scrolling */
+.is-mobile .vertical-tab-content .advancedNoteMover-mobile-settings-container {
+  min-height: min-content;
+}
+
+.advancedNoteMover-mobile-section-heading {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 12px;
+  margin-top: 16px;
+  color: var(--text-normal);
+}
+
+/* Mobile Section Description */
+.advancedNoteMover-mobile-section-description {
+  font-size: 0.9em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+/* Mobile Section Container */
+.advancedNoteMover-mobile-section-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Mobile Setting Cards */
+.advancedNoteMover-mobile-setting-card {
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.advancedNoteMover-mobile-setting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.advancedNoteMover-mobile-setting-title {
+  font-weight: 600;
+  font-size: 1em;
+  flex: 1;
+  color: var(--text-normal);
+  margin-right: 12px;
+}
+
+.advancedNoteMover-mobile-setting-description {
+  font-size: 0.85em;
+  color: var(--text-muted);
+  margin-top: 4px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.advancedNoteMover-mobile-setting-control {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Mobile Toggle Settings */
+.advancedNoteMover-mobile-toggle-setting
+  .advancedNoteMover-mobile-setting-header {
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.advancedNoteMover-mobile-toggle-setting
+  .advancedNoteMover-mobile-setting-description {
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.advancedNoteMover-mobile-toggle-setting
+  .advancedNoteMover-mobile-setting-control {
+  display: none;
+}
+
+.advancedNoteMover-mobile-toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+}
+
+.advancedNoteMover-mobile-toggle-switch {
+  position: relative;
+  width: 52px;
+  height: 32px;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: auto;
+  z-index: 1;
+}
+
+.advancedNoteMover-mobile-toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.advancedNoteMover-mobile-toggle-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-modifier-border);
+  border-radius: 34px;
+  transition: 0.3s;
+}
+
+.advancedNoteMover-mobile-toggle-slider:before {
+  position: absolute;
+  content: '';
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.advancedNoteMover-mobile-toggle-switch.is-active
+  .advancedNoteMover-mobile-toggle-slider {
+  background-color: var(--interactive-accent);
+}
+
+.advancedNoteMover-mobile-toggle-switch.is-active
+  .advancedNoteMover-mobile-toggle-slider:before {
+  transform: translateX(20px);
+}
+
+/* Mobile Input Settings */
+.advancedNoteMover-mobile-input-setting .advancedNoteMover-mobile-text-input {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  background: var(--background-primary);
+  color: var(--text-normal);
+  box-sizing: border-box;
+}
+
+.advancedNoteMover-mobile-input-label {
+  font-weight: 500;
+  font-size: 0.9em;
+  color: var(--text-normal);
+  margin-bottom: 8px;
+}
+
+/* Mobile Filter Cards */
+.advancedNoteMover-mobile-filter-card {
+  padding: 12px;
+  margin-bottom: 8px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  background: var(--background-secondary);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.advancedNoteMover-mobile-filters-list-container {
+  margin-bottom: 12px;
+}
+
+/* Mobile Button Settings */
+.advancedNoteMover-mobile-button-setting .advancedNoteMover-mobile-action-btn {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.advancedNoteMover-mobile-action-btn:hover {
+  opacity: 0.9;
+}
+
+.advancedNoteMover-mobile-action-btn:active {
+  opacity: 0.8;
+}
+
+.advancedNoteMover-mobile-action-btn:focus-visible {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: 2px;
+}
+
+/* Mobile Rule Cards */
+.advancedNoteMover-mobile-rule-card {
+  padding: 12px;
+  margin-bottom: 8px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  background: var(--background-secondary);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.advancedNoteMover-mobile-rule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.advancedNoteMover-mobile-rule-name {
+  font-weight: 600;
+  flex: 1;
+  margin-right: 12px;
+  color: var(--text-normal);
+  word-break: break-word;
+}
+
+.advancedNoteMover-mobile-rule-toggle {
+  flex-shrink: 0;
+  position: relative;
+  width: 52px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.advancedNoteMover-mobile-rule-toggle .advancedNoteMover-mobile-toggle-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-modifier-border);
+  border-radius: 34px;
+  transition: 0.3s;
+}
+
+.advancedNoteMover-mobile-rule-toggle
+  .advancedNoteMover-mobile-toggle-slider:before {
+  position: absolute;
+  content: '';
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.advancedNoteMover-mobile-rule-toggle.is-active
+  .advancedNoteMover-mobile-toggle-slider {
+  background-color: var(--interactive-accent);
+}
+
+.advancedNoteMover-mobile-rule-toggle.is-active
+  .advancedNoteMover-mobile-toggle-slider:before {
+  transform: translateX(20px);
+}
+
+.advancedNoteMover-mobile-rule-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+button.advancedNoteMover-mobile-edit-btn.mod-cta {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.advancedNoteMover-mobile-delete-btn {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-error);
+  cursor: pointer;
+  font-weight: 500;
+  background: var(--background-modifier-error);
+  color: var(--text-on-accent);
+  transition: opacity 0.2s ease;
+}
+
+.advancedNoteMover-mobile-delete-btn:hover {
+  opacity: 0.9;
+}
+
+.advancedNoteMover-mobile-delete-btn:active {
+  opacity: 0.8;
+}
+
+/* Mobile Rules List Container */
+.advancedNoteMover-mobile-rules-list-container {
+  margin-top: 12px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile Retention Controls */
+.advancedNoteMover-mobile-retention-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.advancedNoteMover-mobile-retention-controls input[type='text'],
+.advancedNoteMover-mobile-retention-controls .advancedNoteMover-mobile-dropdown,
+.advancedNoteMover-mobile-retention-controls select,
+.advancedNoteMover-mobile-retention-controls .dropdown {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  background: var(--background-primary);
+  color: var(--text-normal);
+  box-sizing: border-box;
+}
+
+.advancedNoteMover-mobile-dropdown {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  background: var(--background-primary);
+  color: var(--text-normal);
+  box-sizing: border-box;
+}
+
+/* Mobile utility classes */
+.advancedNoteMover-mobile-stack {
+  flex-direction: column;
+}
+
+.advancedNoteMover-mobile-full-width {
+  width: 100%;
+}
+
+.advancedNoteMover-mobile-center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile-optimized settings */
+.setting-item.advancedNoteMover-mobile-optimized {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.setting-item.advancedNoteMover-mobile-optimized .setting-item-name,
+.setting-item.advancedNoteMover-mobile-optimized .setting-item-description {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.setting-item.advancedNoteMover-mobile-optimized .setting-item-control {
+  width: 100%;
+  justify-content: center;
+  margin-left: 0;
+}
+
+/* Mobile toggle controls */
+.advancedNoteMover-mobile-toggle-control {
+  justify-content: center;
+  min-height: 44px;
+}
+
+.advancedNoteMover-mobile-toggle-control .checkbox-container {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Mobile input controls */
+.advancedNoteMover-mobile-input-control {
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.advancedNoteMover-mobile-text-input {
+  min-height: 44px;
+  width: 100%;
+  font-size: 16px; /* Prevents zoom on iOS */
+}
+
+/* Mobile button controls */
+.advancedNoteMover-mobile-button-control {
+  width: 100%;
+  justify-content: center;
+}
+
+.advancedNoteMover-mobile-button-control button {
+  min-width: 100%;
+  min-height: 44px;
+  padding: 12px;
+  font-size: 16px; /* Prevents zoom on iOS */
+}
+
+/* Mobile move buttons */
+.advancedNoteMover-mobile-move-buttons-container {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.advancedNoteMover-mobile-move-button {
+  flex: 1;
+  min-height: 48px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  background: var(--background-primary);
+  color: var(--text-normal);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.advancedNoteMover-mobile-move-button:hover {
+  background: var(--background-modifier-hover);
+  border-color: var(--interactive-accent);
+}
+
+.advancedNoteMover-mobile-move-button:active {
+  background: var(--background-modifier-active);
+  transform: scale(0.98);
+}
+
+.advancedNoteMover-mobile-move-button svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+
+.advancedNoteMover-mobile-move-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.advancedNoteMover-mobile-move-button:focus-visible {
+  outline: 2px solid var(--interactive-accent);
+  outline-offset: 2px;
+}
+
+.advancedNoteMover-mobile-move-button.advancedNoteMover-mobile-move-button-hidden {
+  display: none;
+}
+
+/* Mobile rules container */
+.advancedNoteMover-mobile-rules-container
+  .advancedNoteMover-rule-v2-custom-container.advancedNoteMover-mobile-rule-container {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.advancedNoteMover-mobile-rules-container .advancedNoteMover-rule-v2-name {
+  width: 100%;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.advancedNoteMover-mobile-rules-container
+  .advancedNoteMover-rule-v2-actions.advancedNoteMover-mobile-rule-actions {
+  width: 100%;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.advancedNoteMover-mobile-rules-container
+  .advancedNoteMover-rule-v2-actions
+  .clickable-icon,
+.advancedNoteMover-mobile-rules-container
+  .advancedNoteMover-rule-v2-actions
+  .checkbox-container {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Mobile rule items (V1) */
+.advancedNoteMover-mobile-rule-item {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.advancedNoteMover-mobile-rule-controls {
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.advancedNoteMover-mobile-rule-controls .search-input-container {
+  width: 100%;
+}
+
+.advancedNoteMover-mobile-rule-controls input[type='search'] {
+  min-height: 44px;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* Mobile filters container */
+.advancedNoteMover-mobile-filters-container
+  .advancedNoteMover-mobile-filter-item {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.advancedNoteMover-mobile-filters-container
+  .advancedNoteMover-mobile-filter-controls {
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.advancedNoteMover-mobile-filter-input {
+  min-height: 44px;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* Mobile breakpoint: tablets and phones in portrait */
+@media (max-width: 768px) {
+  /* Modal Size Adjustments */
+  .modal-container.advancedNoteMover-modal-size-small,
+  .modal-container.advancedNoteMover-modal-size-medium,
+  .modal-container.advancedNoteMover-modal-size-large {
+    width: 100vw;
+    max-width: 95vw;
+    min-width: unset;
+  }
+
+  /* Modal Title Adjustments */
+  .advancedNoteMover-modal-title-container {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .advancedNoteMover-modal-title {
+    font-size: 1.4em;
+  }
+
+  .advancedNoteMover-modal-title-icon {
+    font-size: 1.6em;
+  }
+
+  .advancedNoteMover-modal-subtitle {
+    font-size: 1em;
+    margin-bottom: 16px;
+  }
+
+  /* Button Container - Stack vertically on mobile */
+  .advancedNoteMover-modal-button-container {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .advancedNoteMover-modal-button-container > .mod-button,
+  .advancedNoteMover-modal-button-container .setting-item-control button {
+    width: 100%;
+    min-height: 44px;
+    font-size: 1em;
+  }
+
+  /* Modal Section Adjustments */
+  .advancedNoteMover-modal-section {
+    margin-bottom: 20px;
+  }
+
+  .advancedNoteMover-modal-section-header h3 {
+    font-size: 1.1em;
+  }
+
+  /* Info Row Adjustments */
+  .advancedNoteMover-modal-info-row {
+    gap: 12px;
+    font-size: 0.85em;
+  }
+
+  /* History Modal Adjustments */
+  .advancedNoteMover-history-entry {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .advancedNoteMover-history-entry-content {
+    width: 100%;
+  }
+
+  .advancedNoteMover-history-entry-info {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .advancedNoteMover-history-entry-paths {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  /* Scoped to plugin elements only (exclude modal footer buttons) */
+  .advancedNoteMover-time-filter-container .setting-item-control,
+  [class*='noteMover'] .setting-item-control {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .advancedNoteMover-time-filter-container .setting-item-control button,
+  [class*='noteMover'] .setting-item-control button {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px;
+  }
+
+  .advancedNoteMover-modal-button-container .setting-item-control,
+  .note-mover-history-modal
+    .advancedNoteMover-modal-button-container
+    .setting-item-control,
+  .note-mover-preview-modal
+    .advancedNoteMover-modal-button-container
+    .setting-item-control,
+  .note-mover-update-modal
+    .advancedNoteMover-modal-button-container
+    .setting-item-control {
+    margin-left: 0;
+    width: auto;
+    justify-content: center;
+  }
+
+  .advancedNoteMover-modal-button-container .setting-item-control button,
+  .note-mover-history-modal
+    .advancedNoteMover-modal-button-container
+    .setting-item-control
+    button,
+  .note-mover-preview-modal
+    .advancedNoteMover-modal-button-container
+    .setting-item-control
+    button,
+  .note-mover-update-modal
+    .advancedNoteMover-modal-button-container
+    .setting-item-control
+    button {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px;
+  }
+
+  /* Bulk Operations Mobile Adjustments */
+  .advancedNoteMover-history-entry.advancedNoteMover-bulk-operation {
+    padding: 12px 16px;
+  }
+
+  .advancedNoteMover-bulk-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .advancedNoteMover-bulk-operation-info {
+    width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    overflow: visible;
+  }
+
+  /* Rule Editor Modal - Stack footer buttons */
+  .advancedNoteMover-rule-editor-footer {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .advancedNoteMover-rule-editor-footer-left,
+  .advancedNoteMover-rule-editor-footer-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .advancedNoteMover-rule-editor-footer-left button,
+  .advancedNoteMover-rule-editor-footer-right button {
+    min-height: 44px;
+    width: 100%;
+  }
+
+  /* Rule Aggregation Buttons - Stack on mobile */
+  .advancedNoteMover-rule-aggregation-buttons {
+    flex-wrap: wrap;
+  }
+
+  .advancedNoteMover-rule-aggregation-button {
+    flex: 1 1 30%;
+    min-width: 80px;
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 0.95em;
+  }
+
+  /* Trigger Row - Stack elements vertically */
+  .advancedNoteMover-rule-trigger-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .advancedNoteMover-rule-trigger-row .advancedNoteMover-drag-handle-container {
+    order: -1;
+    align-self: flex-end;
+    margin-bottom: 4px;
+  }
+
+  .advancedNoteMover-rule-trigger-delete-btn {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px;
+  }
+
+  .advancedNoteMover-rule-criteria-type,
+  .advancedNoteMover-rule-rule-type,
+  .advancedNoteMover-rule-trigger-value {
+    width: 100%;
+    min-width: unset;
+    min-height: 44px;
+    padding: 10px;
+  }
+
+  .advancedNoteMover-rule-property-name {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px;
+  }
+
+  /* Preview Modal Paths - Allow wrapping */
+  .advancedNoteMover-preview-item-paths {
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.8em;
+  }
+
+  .advancedNoteMover-preview-item-main {
+    margin-bottom: 12px;
+  }
+
+  .advancedNoteMover-preview-item-details {
+    gap: 6px;
+    font-size: 0.85em;
+  }
+
+  .advancedNoteMover-rule-label,
+  .advancedNoteMover-block-reason-label,
+  .advancedNoteMover-filter-label,
+  .advancedNoteMover-tags-label {
+    min-width: unset;
+    width: auto;
+  }
+
+  /* Preview Item - Adjust layout */
+  .advancedNoteMover-modal-list-item.advancedNoteMover-preview-item-success,
+  .advancedNoteMover-modal-list-item.advancedNoteMover-preview-item-blocked {
+    padding: 12px;
+  }
+
+  /* Update Modal - Keep footer horizontal on mobile */
+  .note-mover-update-modal .advancedNoteMover-modal-footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+  }
+
+  .note-mover-update-modal .advancedNoteMover-update-modal-links {
+    flex: 1;
+  }
+
+  .note-mover-update-modal .advancedNoteMover-modal-button-container {
+    flex-direction: row;
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .note-mover-update-modal
+    .advancedNoteMover-modal-button-container
+    .setting-item-control {
+    margin: 0;
+  }
+
+  .note-mover-update-modal .advancedNoteMover-modal-button-container button {
+    width: auto;
+    min-width: 100px;
+    padding: 8px 16px;
+  }
+
+  /* Time Filter Container Mobile */
+  .advancedNoteMover-time-filter-container .setting-item-control {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 8px;
+  }
+
+  .advancedNoteMover-time-filter-container .setting-item-name {
+    width: 100%;
+  }
+
+  /* Setting items with drag handles - Adjust for mobile */
+  .setting-item.advancedNoteMover-with-drag-handle {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .setting-item.advancedNoteMover-with-drag-handle .setting-item-info {
+    width: 100%;
+  }
+
+  .setting-item.advancedNoteMover-with-drag-handle .setting-item-control {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+
+  .advancedNoteMover-drag-handle {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px;
+    border-radius: 6px;
+  }
+
+  /* Rule V2 Mobile Layout */
+  .advancedNoteMover-rule-v2-custom-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 12px 12px;
+  }
+
+  .advancedNoteMover-rule-v2-name {
+    width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 1em;
+  }
+
+  .advancedNoteMover-rule-v2-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .advancedNoteMover-rule-v2-actions .setting-item-control {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .advancedNoteMover-rule-v2-actions button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Empty state adjustments */
+  .advancedNoteMover-modal-empty {
+    padding: 32px 16px;
+    font-size: 1em;
+  }
+
+  /* Info box mobile adjustments */
+  .advancedNoteMover-modal-info-box {
+    padding: 10px 12px;
+  }
+
+  /* Confirm modal button adjustments */
+  .advancedNoteMover-confirm-modal
+    .advancedNoteMover-modal-button-container
+    button {
+    min-width: 100%;
+    min-height: 44px;
+  }
+}
+
+/* Small mobile breakpoint: phones */
+@media (max-width: 480px) {
+  /* Modal Title - Smaller font for very small screens */
+  .advancedNoteMover-modal-title {
+    font-size: 1.2em;
+  }
+
+  .advancedNoteMover-modal-title-icon {
+    font-size: 1.4em;
+  }
+
+  .advancedNoteMover-modal-subtitle {
+    font-size: 0.9em;
+  }
+
+  /* History entries - More compact padding */
+  .advancedNoteMover-history-entry {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .advancedNoteMover-history-entry.advancedNoteMover-bulk-operation {
+    padding: 10px 12px;
+  }
+
+  /* Rule trigger rows - Even more compact */
+  .advancedNoteMover-rule-trigger-row {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  /* Smaller inputs but still touch-friendly */
+  .advancedNoteMover-rule-criteria-type,
+  .advancedNoteMover-rule-rule-type,
+  .advancedNoteMover-rule-trigger-value,
+  .advancedNoteMover-rule-property-name {
+    font-size: 0.95em;
+    padding: 8px;
+  }
+
+  /* Aggregation buttons - Full width on very small screens */
+  .advancedNoteMover-rule-aggregation-button {
+    flex: 1 1 100%;
+    min-width: unset;
+  }
+
+  /* Footer buttons - Full width */
+  .advancedNoteMover-rule-editor-footer-left button,
+  .advancedNoteMover-rule-editor-footer-right button {
+    font-size: 0.95em;
+  }
+
+  /* Preview paths - Smaller font to fit more */
+  .advancedNoteMover-preview-item-paths {
+    font-size: 0.75em;
+  }
+
+  /* Modal list items - More compact */
+  .advancedNoteMover-modal-list-item {
+    padding: 12px;
+  }
+
+  /* Section headers - Smaller */
+  .advancedNoteMover-modal-section-header h3 {
+    font-size: 1em;
+  }
+
+  .advancedNoteMover-rule-conditions-title {
+    font-size: 1em;
+  }
+
+  /* Changelog - Smaller font */
+  .advancedNoteMover-changelog-version-title {
+    font-size: 1.1em;
+  }
+
+  .advancedNoteMover-changelog-section-title {
+    font-size: 0.95em;
+  }
+
+  .advancedNoteMover-changelog-list {
+    font-size: 0.9em;
+  }
+
+  /* Confirm modal message - Smaller font */
+  .advancedNoteMover-confirm-modal-message {
+    font-size: 0.95em;
+  }
+
+  /* Smaller button fonts to fit better - scoped to plugin elements only */
+  [class*='noteMover'] button,
+  .note-mover-history-modal button,
+  .note-mover-preview-modal button,
+  .note-mover-update-modal button,
+  .advancedNoteMover-confirm-modal button {
+    font-size: 0.95em;
+  }
+}
+
+/* ===== MOBILE MODAL STYLES ===== */
+
+/* Base Modal Mobile Styles */
+body.is-mobile .modal-container.advancedNoteMover-modal-size-mobile {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  border-radius: 0;
+  max-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  > .modal-content {
+  padding: 20px 16px;
+  max-height: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+}
+
+/* Rule editor: padding on inner sections, not modal shell */
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .modal-content.advancedNoteMover-rule-editor-modal {
+  padding: 0;
+}
+
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  .setting-item {
+  margin-bottom: 24px;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure all content respects modal padding */
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  .setting-item,
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  .advancedNoteMover-rule-conditions-section,
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  hr {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Separator styling for mobile */
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-separator {
+  margin: 32px 0;
+  border: none;
+  border-top: 1px solid var(--background-modifier-border);
+  opacity: 0.6;
+  width: 100%;
+}
+
+/* Destination folder search (mobile rule editor) */
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  .setting-item.advancedNoteMover-rule-destination-setting {
+  margin-bottom: 24px;
+}
+
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  .search-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+body.is-mobile
+  .modal-content.advancedNoteMover-rule-editor-modal
+  .search-input-container::before,
+body.is-mobile
+  .modal-content.advancedNoteMover-rule-editor-modal
+  .search-input-container::after {
+  display: none;
+  content: none;
+}
+
+body.is-mobile
+  .modal-content.advancedNoteMover-rule-editor-modal
+  .search-input-container
+  > svg:not(.search-input-clear-button svg),
+body.is-mobile
+  .modal-content.advancedNoteMover-rule-editor-modal
+  .search-input-container
+  > .clickable-icon:not(.search-input-clear-button),
+body.is-mobile
+  .modal-content.advancedNoteMover-rule-editor-modal
+  .search-input-container
+  > [class*='icon']:not(.search-input-clear-button),
+body.is-mobile
+  .modal-content.advancedNoteMover-rule-editor-modal
+  .search-input-container
+  > *:not(input):not(.search-input-clear-button) {
+  display: none;
+}
+
+body.is-mobile
+  .modal-content.advancedNoteMover-rule-editor-modal
+  .search-input-container
+  input {
+  padding-left: 16px;
+  padding-right: 40px;
+  background-image: none;
+  background-position: unset;
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body.is-mobile
+  .modal-content.advancedNoteMover-rule-editor-modal
+  .search-input-container
+  .search-input-clear-button {
+  right: 12px;
+  left: auto;
+  position: absolute;
+  z-index: 10;
+}
+
+/* Match Conditions Section Mobile */
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  .setting-item-name {
+  font-weight: 600;
+  font-size: 1em;
+  margin-bottom: 8px;
+  color: var(--text-normal);
+}
+
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  .setting-item-description {
+  font-size: 0.9em;
+  color: var(--text-muted);
+  margin-top: 4px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  .setting-item-control
+  input[type='text'],
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  .setting-item-control
+  .search-input-container
+  input {
+  min-height: 52px;
+  font-size: 16px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--background-modifier-border);
+  transition: border-color 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--background-primary);
+  color: var(--text-normal);
+}
+
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  .setting-item-control
+  input[type='text']:focus,
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  .setting-item-control
+  .search-input-container
+  input:focus {
+  outline: none;
+  border-color: var(--interactive-accent);
+  box-shadow: 0 0 0 2px rgba(var(--interactive-accent-rgb), 0.1);
+}
+
+/* Apply horizontal padding to headings/titles inside modal */
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  .advancedNoteMover-modal-title,
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  .advancedNoteMover-modal-title-container {
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+}
+
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  .advancedNoteMover-modal-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: var(--text-normal);
+}
+
+/* Ensure section containers respect horizontal padding */
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  .advancedNoteMover-rule-conditions-section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-editor-modal
+  .advancedNoteMover-rule-editor-footer {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 8px;
+}
+
+/* Conditions section spacing (mobile rule editor) */
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-conditions-section {
+  margin: 32px 0 24px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body.is-mobile
+  .modal-container.advancedNoteMover-modal-size-mobile
+  .advancedNoteMover-rule-conditions-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-normal);
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+/* History Modal Mobile Styles */
+body.is-mobile .modal-content.note-mover-history-modal {
+  padding: 16px 0;
+}
+
+.is-mobile .advancedNoteMover-time-filter-container-mobile {
+  margin-bottom: 16px;
+}
+
+.is-mobile
+  .advancedNoteMover-time-filter-container-mobile
+  .setting-item-control
+  select {
+  min-height: 48px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.is-mobile .advancedNoteMover-history-entry-mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: var(--background-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--background-modifier-border);
+  gap: 12px;
+}
+
+.is-mobile .advancedNoteMover-history-entry-content {
+  width: 100%;
+  overflow: visible;
+}
+
+.is-mobile .advancedNoteMover-history-entry-info {
+  font-size: 1em;
+  margin-bottom: 8px;
+  word-break: break-word;
+  overflow: visible;
+  white-space: normal;
+}
+
+.is-mobile .advancedNoteMover-history-entry-paths {
+  font-size: 0.9em;
+  color: var(--text-muted);
+  word-break: break-word;
+  line-height: 1.4;
+  overflow: visible;
+  white-space: normal;
+}
+
+.is-mobile .advancedNoteMover-history-entry-buttons-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.is-mobile .advancedNoteMover-history-entry-button-mobile {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  color: var(--text-normal);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.is-mobile .advancedNoteMover-history-entry-button-mobile:active {
+  opacity: 0.8;
+}
+
+.is-mobile .advancedNoteMover-history-entry-button-warning {
+  background: var(--background-modifier-error);
+  color: var(--text-on-accent);
+  border-color: var(--background-modifier-error);
+}
+
+.is-mobile .advancedNoteMover-bulk-operation {
+  margin-bottom: 16px;
+}
+
+.is-mobile .advancedNoteMover-bulk-header {
+  margin-bottom: 12px;
+}
+
+.is-mobile .advancedNoteMover-bulk-operation-info {
+  font-size: 1em;
+  margin-bottom: 8px;
+  overflow: visible;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.is-mobile .advancedNoteMover-bulk-details {
+  margin-top: 12px;
+}
+
+.is-mobile .advancedNoteMover-bulk-details summary {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+}
+
+.is-mobile .advancedNoteMover-bulk-files-list {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.is-mobile .advancedNoteMover-bulk-file-entry {
+  padding: 12px;
+  background: var(--background-primary);
+  border-radius: 6px;
+  border: 1px solid var(--background-modifier-border);
+}
+
+/* Preview Modal Mobile Styles */
+body.is-mobile .modal-content.note-mover-preview-modal {
+  padding: 16px 0;
+}
+
+.is-mobile .advancedNoteMover-preview-section-mobile {
+  margin-bottom: 16px;
+}
+
+.is-mobile .advancedNoteMover-modal-list-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.is-mobile .advancedNoteMover-preview-item-mobile {
+  padding: 12px;
+  background: var(--background-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--background-modifier-border);
+  margin-bottom: 0;
+}
+
+.is-mobile .advancedNoteMover-preview-item-filename {
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+.is-mobile .advancedNoteMover-preview-item-paths-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.is-mobile .advancedNoteMover-preview-path-mobile {
+  font-size: 0.9em;
+  color: var(--text-muted);
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.is-mobile .advancedNoteMover-preview-path-current {
+  color: var(--text-normal);
+}
+
+.is-mobile .advancedNoteMover-preview-arrow-mobile {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1.2em;
+  margin: 4px 0;
+}
+
+.is-mobile .advancedNoteMover-preview-item-details-mobile {
+  font-size: 0.9em;
+  margin-top: 8px;
+}
+
+.is-mobile .advancedNoteMover-modal-footer-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.is-mobile .advancedNoteMover-modal-footer-mobile .setting-item {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.is-mobile .advancedNoteMover-modal-footer-mobile .setting-item button {
+  width: 100%;
+  min-height: 48px;
+  font-size: 16px;
+}
+
+/* Update Modal Mobile Styles */
+body.is-mobile .modal-content.note-mover-update-modal {
+  padding: 16px 0;
+}
+
+.is-mobile .advancedNoteMover-changelog-container-mobile {
+  margin-bottom: 16px;
+}
+
+.is-mobile .advancedNoteMover-changelog-version-mobile {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: var(--background-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--background-modifier-border);
+}
+
+.is-mobile .advancedNoteMover-changelog-version-title {
+  font-size: 1.1em;
+  margin-bottom: 12px;
+}
+
+.is-mobile .advancedNoteMover-changelog-section {
+  margin-bottom: 12px;
+}
+
+.is-mobile .advancedNoteMover-changelog-section-title {
+  font-size: 1em;
+  margin-bottom: 8px;
+}
+
+.is-mobile .advancedNoteMover-changelog-list {
+  font-size: 0.95em;
+  line-height: 1.6;
+  padding-left: 20px;
+}
+
+.is-mobile .advancedNoteMover-update-modal-links-mobile {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.advancedNoteMover-hidden-file-input {
+  display: none;
+}
+
+.advancedNoteMover-mobile-action-btn-primary {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.is-mobile .advancedNoteMover-bulk-undo-setting-mobile button {
+  width: 100%;
+  min-height: 48px;
+}
+
+.is-mobile .advancedNoteMover-update-modal-github-link-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px;
+  border-radius: 6px;
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  color: var(--text-normal);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.is-mobile .advancedNoteMover-update-modal-github-link-mobile:active {
+  opacity: 0.8;
+}
+
+.is-mobile .advancedNoteMover-update-modal-footer-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.is-mobile .advancedNoteMover-update-modal-footer-mobile .setting-item {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.is-mobile .advancedNoteMover-update-modal-footer-mobile .setting-item button {
+  width: 100%;
+  min-height: 48px;
+  font-size: 16px;
+}
+
+/* Confirm Modal Mobile Styles */
+body.is-mobile .modal-content.advancedNoteMover-confirm-modal {
+  padding: 16px 0;
+}
+
+.is-mobile .advancedNoteMover-confirm-modal-message-mobile {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  word-break: break-word;
+}
+
+.is-mobile .advancedNoteMover-confirm-modal .setting-item {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.is-mobile .advancedNoteMover-confirm-modal .setting-item:last-child {
+  margin-bottom: 0;
+}
+
+.is-mobile .advancedNoteMover-confirm-modal .setting-item button {
+  width: 100%;
+  min-height: 48px;
+  font-size: 16px;
+}
+
+/* Mobile Modal General Improvements */
+.is-mobile .advancedNoteMover-modal-title {
+  font-size: 1.3em;
+  margin-bottom: 12px;
+}
+
+.is-mobile .advancedNoteMover-modal-subtitle {
+  font-size: 0.95em;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.is-mobile .advancedNoteMover-modal-section-header h3 {
+  font-size: 1.1em;
+  margin-bottom: 12px;
+}
+
+/* Optimize for large vertical aspect ratios */
+@media (max-height: 800px) and (orientation: portrait) {
+  body.is-mobile
+    .modal-container.advancedNoteMover-modal-size-mobile
+    > .modal-content {
+    padding: 16px 12px;
+  }
+
+  body.is-mobile
+    .modal-container.advancedNoteMover-modal-size-mobile
+    .modal-content.advancedNoteMover-rule-editor-modal {
+    padding: 16px 12px;
+  }
+
+  .is-mobile .advancedNoteMover-modal-title {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+  }
+
+  .is-mobile .advancedNoteMover-modal-subtitle {
+    font-size: 0.9em;
+    margin-bottom: 12px;
+  }
+
+  .is-mobile .advancedNoteMover-history-entry-mobile,
+  .is-mobile .advancedNoteMover-preview-item-mobile {
+    padding: 12px;
+    margin-bottom: 12px;
+    gap: 12px;
+  }
+
+  .is-mobile .advancedNoteMover-changelog-version-mobile {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+.advancedNoteMover-preview-bulk-status {
+  margin-bottom: 0.5rem;
+  font-size: 0.9em;
+  color: var(--text-muted);
+}
+
+.advancedNoteMover-preview-bulk-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Preview modal: full-width footer buttons (replaces inline styles) */
+.note-mover-preview-modal
+  .advancedNoteMover-modal-footer-mobile
+  .setting-item
+  button {
+  width: 100%;
+  min-height: 48px;
+}

@@ -1,24 +1,38 @@
 {
   "main": {
-    "id": "807c5fa29cac9b5e",
+    "id": "d730848f6ec794ff",
     "type": "split",
     "children": [
       {
-        "id": "976136c95a9df5c3",
+        "id": "457493bd632e86a1",
         "type": "tabs",
         "children": [
           {
-            "id": "f508263d0f8e41d2",
+            "id": "a8555f475638f96e",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Personal/Daily/2026-05-08.md",
-                "mode": "source",
+                "file": "00 System/Dashboards/Main Dashboard.md",
+                "mode": "preview",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "2026-05-08"
+              "title": "Main Dashboard"
+            }
+          },
+          {
+            "id": "b0bb5c0e5ace1e7c",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "beautytasks-main",
+              "state": {},
+              "pinned": true,
+              "icon": "check-circle",
+              "title": "BeautyTasks"
             }
           }
         ]
@@ -27,11 +41,11 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "ce27030d3dbf4e17",
+    "id": "6584a5fb34c39cf1",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "5893ddbc0cac9cd9",
+        "id": "6f3aa3968d206790",
         "type": "leaf",
         "state": {
           "type": "file-explorer",
@@ -44,24 +58,7 @@
         }
       },
       {
-        "id": "1d31ce6eb1af1924",
-        "type": "leaf",
-        "state": {
-          "type": "search",
-          "state": {
-            "query": "path:\"Projects/WeightOS/\" ",
-            "matchingCase": false,
-            "explainSearch": false,
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical"
-          },
-          "icon": "lucide-search",
-          "title": "Search"
-        }
-      },
-      {
-        "id": "8052cb411defaf69",
+        "id": "456e673f52a740be",
         "type": "leaf",
         "state": {
           "type": "all-properties",
@@ -75,43 +72,56 @@
         }
       },
       {
-        "id": "17e9bb489cd381f1",
+        "id": "18527c2c98c6623e",
         "type": "leaf",
         "state": {
-          "type": "tag",
-          "state": {
-            "sortOrder": "frequency",
-            "useHierarchy": true,
-            "showSearch": false,
-            "searchQuery": ""
-          },
-          "icon": "lucide-tags",
-          "title": "Tags"
+          "type": "beautytasks-nav",
+          "state": {},
+          "icon": "check-circle",
+          "title": "BeautyTasks"
         }
       },
       {
-        "id": "0a1f5b3954a8b509",
+        "id": "d94b1fae165fc2d1",
         "type": "leaf",
         "state": {
-          "type": "VIEW_TYPE_LONGFORM_EXPLORER",
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "Search"
+        }
+      },
+      {
+        "id": "321d1fa1fbfe2207",
+        "type": "leaf",
+        "state": {
+          "type": "story-line-navigator",
           "state": {},
-          "icon": "longform",
-          "title": "Longform"
+          "icon": "compass",
+          "title": "StoryLine navigator"
         }
       }
     ],
     "currentTab": 0
   },
   "right": {
-    "id": "dddb9850e5f043be",
+    "id": "3b2933df8ba23089",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "c54d82445aeba299",
+        "id": "695c46b0c68cd0e3",
         "type": "leaf",
         "state": {
           "type": "backlink",
           "state": {
+            "file": "00 System/Dashboards/Main Dashboard.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -125,12 +135,25 @@
         }
       },
       {
-        "id": "b0494a9c070739f7",
+        "id": "0052ffc25fc33c4a",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "Outgoing links"
+        }
+      },
+      {
+        "id": "56808917cfcf2462",
         "type": "leaf",
         "state": {
           "type": "outline",
           "state": {
-            "file": "Research/Simple Structure to Writing Books.md",
+            "file": "00 System/Dashboards/Main Dashboard.md",
             "followCursor": false,
             "showSearch": false,
             "searchQuery": ""
@@ -140,7 +163,7 @@
         }
       },
       {
-        "id": "843bd90d1d3ede7f",
+        "id": "45a99f11f9633369",
         "type": "leaf",
         "state": {
           "type": "calendar",
@@ -148,68 +171,31 @@
           "icon": "calendar-with-checkmark",
           "title": "Calendar"
         }
+      },
+      {
+        "id": "749ae9f8e3d8e1cb",
+        "type": "leaf",
+        "state": {
+          "type": "story-line-scene-inspector",
+          "state": {},
+          "icon": "file-search",
+          "title": "Scene details"
+        }
       }
     ],
-    "currentTab": 2
+    "currentTab": 3
   },
   "left-ribbon": {
     "hiddenItems": {
-      "quickadd:QuickAdd": false,
-      "switcher:Open quick switcher": false,
-      "canvas:Create new canvas": false,
-      "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian-kanban:Create new board": false,
-      "daily-notes:Open today's daily note": false
+      "storyline:StoryLine projects": false,
+      "quickadd:QuickAdd": false,
+      "beautytasks:Open BeautyTasks": false,
+      "workspaces:Manage workspace layouts": false,
+      "note-mover-shortcut:Advanced Note Mover": false
     }
   },
-  "active": "f508263d0f8e41d2",
-  "lastOpenFiles": [
-    "Projects/Yagami/Yagami.md",
-    "Personal/Daily/2026-05-08.md",
-    "Projects/Yagami/Pages/Corpo.md",
-    "Coldbox/Prompt de votação.md",
-    "Coldbox/Perfect Blue.md",
-    "Coldbox/Manio.md",
-    "Coldbox/Artigo de planejamento periódico.md",
-    "Personal/Daily/2026-05-07.md",
-    "Projects/Knights of God/Knights of God.md",
-    "Icebox/Archives/Heavensing/Personas/Agente Michael Godffrey.md",
-    "Research/Como Anotar de forma correta.md",
-    "Research/A importância de um sorriso.md",
-    "Personal/Daily/2026-04-14.md",
-    "Personal/Daily/2026-04-15.md",
-    "Personal/Daily/2026-04-23.md",
-    "Personal/Daily/2026-04-27.md",
-    "Personal/Daily/2026-04-26.md",
-    "Personal/Daily/2026-05-03.md",
-    "Personal/Daily/2026-05-05.md",
-    "Research/Pontos anatômicamente fatais para uma facada.md",
-    "Personal/Daily/2026-01-26.md",
-    "Personal/Study/Propriedades.md",
-    "Personal/Daily/2026-03-21.md",
-    "Personal/Daily/2026-03-22.md",
-    "Coldbox/20260504.md",
-    "Personal/Daily/2026-05-06.md",
-    "Personal/Weekly",
-    "Projects/Coldwriter/Research",
-    "Projects/Coldwriter/Realases",
-    "Projects/Untitled",
-    "Projects/Knights of God/Assets/Research",
-    "Projects/Knights of God/Chapters/Chapter I",
-    "Projects/Knights of God/Assets/Brainstorm",
-    "Projects/Knights of God/Assets/Ideas",
-    "Projects/Knights of God/Assets/Characters/Anton — Versions",
-    "Projects/Knights of God/Assets/Characters",
-    "Icebox/Documentation/Attatchments of the Vault/WeightLogo 1.png",
-    "Icebox/Documentation/Attatchments of the Vault/WeightLogo 2.png",
-    "Icebox/Documentation/Attatchments of the Vault/Pallet1.png",
-    "Icebox/Attachments/slashing.png",
-    "Icebox/Attachments/Screenshot_20260222_171439_MiXplorer_1.png",
-    "Iceboz/Documentation/Attatchments of the Vault/Pallet1.png",
-    "Iceboz/Documentation/Attatchments of the Vault/WeightLogo 1.png",
-    "Iceboz/Documentation/Attatchments of the Vault/WeightLogo 2.png"
-  ]
+  "active": "a8555f475638f96e",
+  "lastOpenFiles": []
 }

@@ -1,0 +1,255 @@
+{
+  "settings": {
+    "triggers": {
+      "enablePeriodicMovement": true,
+      "periodicMovementInterval": 30,
+      "enableOnEditTrigger": true
+    },
+    "filters": {
+      "filter": [
+        {
+          "value": "path: 00 System"
+        }
+      ]
+    },
+    "rulesV2": [
+      {
+        "name": "🗄️ Archived",
+        "destination": "00 System/Archives",
+        "aggregation": "all",
+        "triggers": [
+          {
+            "criteriaType": "properties",
+            "operator": "includes item",
+            "value": "archived",
+            "propertyName": "status",
+            "propertyType": "list"
+          }
+        ],
+        "active": true
+      },
+      {
+        "name": "⚙️ System – Bases",
+        "destination": "00 System/Bases",
+        "aggregation": "all",
+        "triggers": [
+          {
+            "criteriaType": "fileName",
+            "operator": "contains",
+            "value": ".base"
+          }
+        ],
+        "active": true
+      },
+      {
+        "name": "⚙️ System – Dashboards",
+        "destination": "00 System/Dashboards",
+        "aggregation": "all",
+        "triggers": [
+          {
+            "criteriaType": "properties",
+            "operator": "contains",
+            "value": "dashboard",
+            "propertyName": "type",
+            "propertyType": "text"
+          }
+        ],
+        "active": true
+      },
+      {
+        "name": "📓 Journal – Periodic",
+        "destination": "10 Journal/Periodic",
+        "aggregation": "any",
+        "triggers": [
+          {
+            "criteriaType": "properties",
+            "operator": "contains",
+            "value": "periodic",
+            "propertyName": "type",
+            "propertyType": "text"
+          },
+          {
+            "criteriaType": "properties",
+            "operator": "includes item",
+            "value": "daily",
+            "propertyName": "type",
+            "propertyType": "list"
+          },
+          {
+            "criteriaType": "properties",
+            "operator": "includes item",
+            "value": "weekly",
+            "propertyName": "type",
+            "propertyType": "list"
+          },
+          {
+            "criteriaType": "properties",
+            "operator": "includes item",
+            "value": "monthly",
+            "propertyName": "type",
+            "propertyType": "list"
+          }
+        ],
+        "active": true
+      },
+      {
+        "name": "📓 Journal – Routine & Ops",
+        "destination": "10 Journal/Routine & Ops",
+        "aggregation": "any",
+        "triggers": [
+          {
+            "criteriaType": "properties",
+            "operator": "contains",
+            "value": "routine",
+            "propertyName": "type",
+            "propertyType": "text"
+          },
+          {
+            "criteriaType": "properties",
+            "operator": "contains",
+            "value": "task",
+            "propertyName": "type",
+            "propertyType": "text"
+          },
+          {
+            "criteriaType": "properties",
+            "operator": "contains",
+            "value": "spendings",
+            "propertyName": "type",
+            "propertyType": "text"
+          }
+        ],
+        "active": true
+      },
+      {
+        "name": "📓 Journal – Reflections",
+        "destination": "10 Journal/Reflections",
+        "aggregation": "any",
+        "triggers": [
+          {
+            "criteriaType": "properties",
+            "operator": "contains",
+            "value": "daydream",
+            "propertyName": "type",
+            "propertyType": "text"
+          },
+          {
+            "criteriaType": "properties",
+            "operator": "contains",
+            "value": "decision",
+            "propertyName": "type",
+            "propertyType": "text"
+          },
+          {
+            "criteriaType": "properties",
+            "operator": "contains",
+            "value": "event",
+            "propertyName": "type",
+            "propertyType": "text"
+          },
+          {
+            "criteriaType": "properties",
+            "operator": "contains",
+            "value": "location-journal",
+            "propertyName": "type",
+            "propertyType": "text"
+          },
+          {
+            "criteriaType": "properties",
+            "operator": "contains",
+            "value": "therapy",
+            "propertyName": "type",
+            "propertyType": "text"
+          }
+        ],
+        "active": true
+      },
+      {
+        "name": "🧠 Brain – Atomic",
+        "destination": "20 Brain/Atomic",
+        "aggregation": "all",
+        "triggers": [
+          {
+            "criteriaType": "properties",
+            "operator": "contains",
+            "value": "atomic",
+            "propertyName": "type",
+            "propertyType": "text"
+          }
+        ],
+        "active": true
+      },
+      {
+        "name": "🧠 Brain – Ideas",
+        "destination": "20 Brain/Ideas",
+        "aggregation": "all",
+        "triggers": [
+          {
+            "criteriaType": "properties",
+            "operator": "contains",
+            "value": "idea",
+            "propertyName": "type",
+            "propertyType": "text"
+          }
+        ],
+        "active": true
+      },
+      {
+        "name": "🧠 Brain – Research",
+        "destination": "20 Brain/Research",
+        "aggregation": "all",
+        "triggers": [
+          {
+            "criteriaType": "properties",
+            "operator": "contains",
+            "value": "research",
+            "propertyName": "type",
+            "propertyType": "text"
+          }
+        ],
+        "active": true
+      },
+      {
+        "name": "🗂️ Projects",
+        "destination": "30 Projects",
+        "aggregation": "all",
+        "triggers": [
+          {
+            "criteriaType": "properties",
+            "operator": "contains",
+            "value": "project",
+            "propertyName": "type",
+            "propertyType": "text"
+          }
+        ],
+        "active": true
+      }
+    ],
+    "retentionPolicy": {
+      "value": 30,
+      "unit": "days"
+    },
+    "enableRuleEvaluationCache": true,
+    "enableVaultIndexCache": true,
+    "enablePerformanceDebug": false,
+    "attachments": {
+      "moveWithNote": true,
+      "skipSharedAttachments": true,
+      "deleteEmptyAssetFolders": false
+    },
+    "showReleaseNotesOnUpdate": true,
+    "conflictResolution": {
+      "strategy": "skip"
+    },
+    "createMissingDestinationFolders": true
+  },
+  "history": {
+    "history": [],
+    "bulkOperations": []
+  },
+  "lastSeenVersion": "1.2.1",
+  "schemaVersion": 1,
+  "conflictSkipCache": {
+    "entries": []
+  }
+}

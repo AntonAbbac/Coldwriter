@@ -1,0 +1,70 @@
+/* === Dashboard (by stormy) === */
+
+.dashboard {
+  font-family: inherit;
+  padding: 20px 25px 0;
+}
+
+.dashboard .markdown-preview-section {
+  max-width: 100%;
+}
+
+/* Title */
+.dashboard .markdown-preview-section .title {
+  position: absolute;
+  top: 60px;
+  font-size: 26pt;
+  font-weight: bolder;
+  letter-spacing: 8px;
+}
+
+.dashboard h1 {
+  border-width: 1px;
+  padding-bottom: 3px;
+  font-size: 28px;
+}
+
+/* Hide parent bullet and indentation guides */
+.dashboard div.markdown-preview-section > div > ul > li > div.list-bullet {
+  display: none;
+}
+
+.dashboard.markdown-rendered.show-indentation-guide li > :is(ul, ol)::before {
+  display: none;
+}
+
+/* List layout */
+.dashboard div > ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: 50px;
+}
+
+.dashboard div > ul > li {
+  min-width: 250px;
+  width: 15%;
+}
+
+/* Dataview support */
+.dashboard ul.dataview {
+  row-gap: 0;
+  list-style-type: disc;
+}
+
+/* Wide margin when "Readable line length" is enabled */
+.dashboard.markdown-preview-view.is-readable-line-width
+  :is(.markdown-preview-section, .markdown-preview-section > div) {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Banner integration */
+.dashboard .obsidian-banner-wrapper { margin-top: 0; padding-top: 0; }
+.dashboard .metadata-container { margin-top: calc(var(--banner-height) - 10px); }
+.dashboard .mod-header { margin-top: calc(var(--banner-height) - 30px); }
+
+/* Remove trailing whitespace */
+.dashboard .markdown-source-view.mod-cm6 .cm-sizer { padding-bottom: 0; }
+.dashboard .markdown-rendered { padding-bottom: 0; }
+.dashboard .markdown-source-view.mod-cm6 .cm-content { min-height: auto; }

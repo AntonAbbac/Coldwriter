@@ -1,8 +1,10 @@
 {
   "cssTheme": "unsent-letters",
-  "theme": "system",
-  "accentColor": "",
   "enabledCssSnippets": [
-    "obsidian-icons"
-  ]
+    "dashboard",
+    "multi-column",
+    "hide-properties"
+  ],
+  "accentColor": "",
+  "theme": "obsidian"
 }

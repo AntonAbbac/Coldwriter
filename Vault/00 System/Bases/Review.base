@@ -1,0 +1,15 @@
+filters:
+  and:
+    - file.tags.contains("review")
+views:
+  - type: list
+    name: For Review
+    order:
+      - file.name
+      - type
+      - file.mtime
+    sort:
+      - property: file.mtime
+        direction: ASC
+    limit: 10
+    separator: ":"

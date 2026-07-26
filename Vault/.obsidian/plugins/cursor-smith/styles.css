@@ -1,0 +1,202 @@
+/* --- Settings panel: collapsible section groups --------------------------
+   Wraps each named group of settings (Presets, Appearance, Blinking, etc.)
+   in a native <details>/<summary>, so a 60+ setting panel can be collapsed
+   down to just the sections someone actually uses. Sections default open -
+   collapsibility is the point, not being hidden by default. */
+.cursor-smith-section {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.cursor-smith-section > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0.2em 0;
+}
+
+.cursor-smith-section > summary::-webkit-details-marker {
+  display: none;
+}
+
+.cursor-smith-section > summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 6px;
+  color: var(--text-muted);
+  transition: transform 0.1s ease;
+}
+
+.cursor-smith-section[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.cursor-smith-section-title {
+  font-size: var(--font-ui-medium);
+  font-weight: 700;
+}
+
+.cursor-smith-subsection-title {
+  font-size: var(--font-ui-smaller);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  margin: 0.9em 0 0.2em;
+}
+
+/* ...but not when it's what opens a group - the group's own top margin
+   already provides the gap. */
+.cursor-smith-sub > .cursor-smith-subsection-title:first-child {
+  margin-top: 0.2em;
+}
+
+/* --- Settings panel: indent sub-options nested under a parent toggle
+   (or style dropdown), so conditional groups - e.g. Torch Spotlight's
+   Follow/Light Size/etc., or Box style's Hollow -> Outline Width - read
+   as a visual hierarchy instead of a flat list of settings.
+
+   This is a container that WRAPS a group of settings (see subGroup() in
+   main.js), not a class stamped onto each individual setting row, which is
+   what it used to be (.cursor-smith-indent-1 / -2). One element per group
+   means one guide line with a real start and end, rather than a stack of
+   per-row segments that only read as continuous while no row had a margin;
+   and because the indent comes from the wrapper, groups nest by nesting -
+   no hardcoded class and margin per depth level.
+
+   Geometry deliberately matches Word-Smith's .ws-settings-sub so the two
+   plugins' settings panels line up visually. */
+.cursor-smith-sub {
+  border-left: 2px solid var(--background-modifier-border);
+  margin-left: 12px;
+  padding-left: 12px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+/* Obsidian gives every .setting-item a top border to separate it from the
+   previous row. At the top of a group that separator is redundant - the
+   group's own left rule and margin already mark the break - and it reads as
+   a stray line hanging off the corner. */
+.cursor-smith-sub > .setting-item:first-child {
+  border-top: none;
+  padding-top: 0.4em;
+}
+
+/* A nested group sits directly under its parent setting rather than a
+   sibling row, so it doesn't need the extra breathing room above. */
+.cursor-smith-sub > .cursor-smith-sub {
+  margin-top: 0;
+}
+
+/* --- Settings panel: the Gradient feature's rows of color pickers --------
+   The gradient has one row of 2-4 pickers per theme (dark and light). Each
+   row's pickers are all added to a SINGLE Setting (see renderLookSettings in
+   main.js) so they lay out side by side in that row's control area rather
+   than each getting its own labelled row. Obsidian's .setting-item-control is
+   already a flex row, so all this needs to add is breathing room between the
+   swatches - without it they butt against each other and read as one wide
+   multi-colored control instead of N separate pickers. */
+.cursor-smith-color-row .setting-item-control {
+  gap: 6px;
+}
+
+/* --- Canvas Engine Styles (Box, Line, Underline) --- */
+.retro-box-cursor-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* The Translucent option works by putting a mix-blend-mode on the canvas
+   WRAPPER (the div this canvas sits in), set from main.js - see
+   applyCanvasBlend there for why it has to be the wrapper and not the canvas
+   itself. Two things would quietly break it, neither of which looks like a
+   bug at the point you'd write it:
+
+     • `isolation: isolate` on anything between the wrapper and
+       .app-container. Isolation stops the blend reaching the editor, so the
+       option silently does nothing at all.
+     • a mix-blend-mode declared on .retro-box-cursor-canvas here. The
+       wrapper is a stacking context, so a blend on the canvas inside it
+       composites against the wrapper's empty background - no visible effect,
+       and it costs a blend pass every frame to achieve nothing.
+
+   Keep blend-mode handling for this layer in main.js only. */
+
+/* The class is doubled (`.foo.foo`) purely to raise this selector's
+   specificity above a plausible community theme or CSS snippet that sets
+   caret-color on the same or a more specific element - without reaching for
+   !important, which would make this impossible for a user to override in
+   turn (e.g. to combine this plugin with their own caret tweaks). */
+body.retro-box-cursor-hide-native.retro-box-cursor-hide-native {
+  caret-color: transparent;
+}
+
+/* CodeMirror 6 (Obsidian's editor) draws its own cursor as a DOM element
+   rather than relying on the browser's native caret, so caret-color alone
+   doesn't hide it - it has its own independent blink cycle and would
+   otherwise flash through whenever our custom cursor fades out. The
+   ancestor class is doubled for the same specificity reason as above: CM6
+   themes style these cursor elements directly, so we need real specificity
+   headroom rather than relying on !important or stylesheet load order. */
+body.retro-box-cursor-hide-native.retro-box-cursor-hide-native .cm-cursor,
+body.retro-box-cursor-hide-native.retro-box-cursor-hide-native .cm-cursor-primary,
+body.retro-box-cursor-hide-native.retro-box-cursor-hide-native .cm-cursor-secondary,
+body.retro-box-cursor-hide-native.retro-box-cursor-hide-native .cm-fat-cursor,
+body.retro-box-cursor-hide-native.retro-box-cursor-hide-native .cm-dropCursor {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+/* Belt-and-braces: some CM themes set caret-color directly on .cm-content
+   or .cm-line. That used to tie in specificity with the rule above and
+   fall back to stylesheet load order (fixed here with !important); doubling
+   the ancestor class instead gives this selector more specificity than a
+   theme's plain `.cm-content`/`.cm-line` rule outright, so we no longer
+   depend on load order OR need !important to win the cascade. */
+body.retro-box-cursor-hide-native.retro-box-cursor-hide-native .cm-content,
+body.retro-box-cursor-hide-native.retro-box-cursor-hide-native .cm-line {
+  caret-color: transparent;
+}
+
+/* --- Torch Spotlight Effect ---
+   All of the torch overlay's CSS (positioning, gradient, blend mode) lives
+   entirely in the dynamically-injected stylesheet in main.js (injectStyles),
+   since the overlay's colors and radius are driven live from plugin settings
+   via CSS custom properties. Do NOT re-add a .torch-cursor-overlay rule here:
+   a version of this rule used to live in this file and, because its selector
+   was more specific than the one in main.js, it silently won the cascade and
+   overrode the settings-driven values. Keep all torch-cursor-overlay styling
+   in main.js only.
+
+   The candle-flicker keyframe animation that used to accompany this has been
+   removed outright. A CSS animation runs on the compositor, completely outside
+   main.js's requestAnimationFrame frame governor, so it held the display at
+   full refresh rate for as long as the torch was on no matter which gear the
+   render loops selected - and because the overlay uses mix-blend-mode:
+   multiply across the editor pane, each flicker frame forced a re-composite of
+   the blended layer against its backdrop instead of being a cheap opacity
+   change. Do not re-add an animation property on this element in either file.
+   If the effect is wanted again, drive --torch-intensity from the torch tick
+   so it stays under the governor. */
+
+
+/* Note: we used to force .titlebar/.status-bar to a very high z-index here
+   to keep the cursor canvas from painting over them. That fought against
+   whatever stacking context Obsidian's own DOM created around those
+   elements (numerically "winning" z-index doesn't help if an ancestor
+   creates its own stacking context), so the canvas could still end up on
+   top in practice - and a full-viewport layer sitting over the titlebar,
+   even invisibly, is exactly what breaks Electron's native window-drag
+   hit-testing. The canvas is now clip-path'd to the actual editor pane in
+   main.js (see editorClip()), so it's physically incapable of overlapping
+   the titlebar or status bar - no z-index tug-of-war needed, and dragging
+   the window works normally again. */

@@ -1,15 +1,12 @@
 [
-  "dataview",
-  "obsidian-excalidraw-plugin",
-  "obsidian-kanban",
-  "obsidian-languagetool-plugin",
-  "longform",
-  "obsidian-outliner",
-  "quickadd",
-  "obsidian-style-settings",
-  "obsidian-icon-folder",
-  "animated-cursor",
+  "storyline",
+  "simple-banner",
   "obsidian-linter",
-  "obsidian-tasks-plugin",
-  "calendar"
+  "obsidian-languagetool-plugin",
+  "calendar",
+  "beautytasks",
+  "cursor-smith",
+  "obsidian-icon-folder",
+  "quickadd",
+  "note-mover-shortcut"
 ]

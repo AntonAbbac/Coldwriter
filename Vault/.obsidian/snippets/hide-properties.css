@@ -1,0 +1,13 @@
+/* === Hide Properties === */
+
+.workspace-leaf-content[data-sb] {
+  .markdown-preview-view { --metadata-display-reading: none; }
+  .inline-title { display: none; }
+  div.simple-banner { margin-top: calc(var(--sb-height, 240px) - var(--file-margins) - 15px); }
+}
+
+.hider-file-nav-header
+  .workspace-leaf-content[data-type="file-explorer"]
+  .nav-header {
+  display: none;
+}

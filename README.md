@@ -3,7 +3,7 @@
 <br><br>
 Coldwriter
 <br>
-<img src="./.github/assets/pallet.png" width="500px" />
+<img src="./.github/assets/Pallet.png" width="500px" />
 <br><br>
 <em>"The best writing is cold"</em>
 <br><br>
@@ -27,10 +27,10 @@ Coldwriter
 ## 🖼️ Gallery
 
 <p align="center">
-<img src="./.github/assets/vaultshot 1.png" style="margin-bottom: 15px;"/> <br>
-<img src="./.github/assets/vaultshot 2.png" style="margin-bottom: 15px;"/> <br>
-<img src="./.github/assets/vaultshot 3.png" style="margin-bottom: 15px;"/> <br>
-Screenshots last updated <b>2026-05-08</b>
+<img src="./.github/assets/Vaultshot_dark.png" style="margin-bottom: 15px;"/> <br>
+<img src="./.github/assets/Vaultshot_light.png" style="margin-bottom: 15px;"/> <br>
+
+Screenshots last updated <b>2026-07-25</b>
 </p>
 
 ---
@@ -38,89 +38,67 @@ Screenshots last updated <b>2026-05-08</b>
 ## 🗃️ Overview
 
 > [!IMPORTANT]
-> **Coldwriter** is a structured **Vault** designed as a foundation for learning **writing** and working with **Obsidian**.
-> It is built to support:
+> **Coldwriter** is a structured **Vault** built as a foundation for learning **writing** and working with **Obsidian**.
+> It's meant to support:
 >
-> - Development of long-form manuscripts and long texts
+> - Long-form manuscripts and long-form writing in general
 > - Journaling, studying, and writing practice
-> - Friction-free daily use
+> - A low-friction daily workflow
 
 ### 📖 Vault Systems
 
 - **Long-form**
-- **Journaling and simple tracker**
-
-#### 🗂️ Folder Structure
-
-- Coldbox
-- Icebox
-    - Archives
-    - Attachments
-    - Templates
-- Personal
-    - Daily
-    - Study
-    - Workout
-- Projects
-- Research
-- Scratch
+- **Journaling and a simple tracker**
+- **Atomic notes / Zettelkasten-style capture**
+- **Project and decision tracking**
 
 ### 📖 Plugins
 
 #### Core
 
 | Plugin          |
-| --------------- |
+| ---------------- |
 | backlink        |
 | bases           |
-| canvas          |
 | command-palette |
-| daily notes     |
 | editor-status   |
 | file-explorer   |
 | global-search   |
 | outline         |
-| page-preview    |
 | properties      |
-| slash-command   |
-| switcher        |
-| tags            |
-| templates       |
 | word-count      |
+| workspaces      |
 
 ---
 
 #### Community
 
 | Plugin                       | Repo                                                                                                           |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| animated-cursor              | [github.com/smikula/obsidian-animated-cursor](https://github.com/smikula/obsidian-animated-cursor)             |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| beautytasks                  | [github.com/avnibilgin/BeautyTasks](https://github.com/avnibilgin/BeautyTasks)                                 |
 | calendar                     | [github.com/liamcain/obsidian-calendar-plugin](https://github.com/liamcain/obsidian-calendar-plugin)           |
-| dataview                     | [github.com/blacksmithgu/obsidian-dataview](https://github.com/blacksmithgu/obsidian-dataview)                 |
-| longform                     | [github.com/kevboh/longform](https://github.com/kevboh/longform)                                               |
-| obsidian-excalidraw-plugin   | [github.com/zsviczian/obsidian-excalidraw-plugin](https://github.com/zsviczian/obsidian-excalidraw-plugin)     |
+| cursor-smith                 | [github.com/sadsnake1/cursor-smith](https://github.com/sadsnake1/cursor-smith)                                 |
+| note-mover-shortcut          | [github.com/bueckerlars/obsidian-note-mover-shortcut](https://github.com/bueckerlars/obsidian-note-mover-shortcut) |
 | obsidian-icon-folder         | [github.com/FlorianWoelki/obsidian-iconize](https://github.com/FlorianWoelki/obsidian-iconize)                 |
-| obsidian-kanban              | [github.com/mgmeyers/obsidian-kanban](https://github.com/mgmeyers/obsidian-kanban)                             |
 | obsidian-languagetool-plugin | [github.com/Clemens-E/obsidian-languagetool-plugin](https://github.com/Clemens-E/obsidian-languagetool-plugin) |
 | obsidian-linter              | [github.com/platers/obsidian-linter](https://github.com/platers/obsidian-linter)                               |
-| obsidian-outliner            | [github.com/vslinko/obsidian-outliner](https://github.com/vslinko/obsidian-outliner)                           |
-| obsidian-style-settings      | [github.com/mgmeyers/obsidian-style-settings](https://github.com/mgmeyers/obsidian-style-settings)             |
-| obsidian-tasks-plugin        | [github.com/obsidian-tasks-group/obsidian-tasks](https://github.com/obsidian-tasks-group/obsidian-tasks)       |
 | quickadd                     | [github.com/chhoumann/quickadd](https://github.com/chhoumann/quickadd)                                         |
+| simple-banner                | [github.com/eatcodeplay/obsidian-simple-banner](https://github.com/eatcodeplay/obsidian-simple-banner)         |
+| storyline                    | [github.com/pixerojan/obsidian-storyline](https://github.com/pixerojan/obsidian-storyline)                                                                                                              |
 
 ---
 
 ## 🔧 Getting Started
 
 > [!CAUTION]
-> This vault is a personal template. Use it as it fits your workflow. Always review and adapt the configuration to your needs before installing.
-> This vault is recommended for users with basic Obsidian knowledge.
+> This vault is a personal template. Use whatever fits your workflow. Always review and tweak the config before relying on it.
+> Recommended if you already know your way around Obsidian a bit.
 
 ---
 
 ### 1. Install Obsidian
 
-Download Obsidian for your platform:
+Grab Obsidian for your platform:
 Windows · Linux · macOS · Android · iOS
 
 🔗 https://obsidian.md/download
@@ -139,23 +117,22 @@ Windows · Linux · macOS · Android · iOS
 2. Enable Community Plugins
 3. Reload the vault
 
-The system is ready to use.
+That's it, you're set.
 
 > [!WARNING]
-> Read the vault documentation before use to understand its systems and information processing cycle. The home page inside the vault provides access to all documentation.
-> This step reduces operational errors and redundant questions.
+> Read the vault docs before diving in so you actually get how the systems and info flow work. The home page inside the vault links out to all of it.
+> Saves you headaches and repeat questions later.
 
 ---
 
 ## ☃️ Credits
 
-A personal project created with great admiration, intended for Obsidian users.
+A personal project made with a lot of care, for other Obsidian nerds.
 
 ---
 
 ## 📃 License
 
-This project is licensed under the MIT License.
-See the LICENSE file for details.
+MIT License. See the LICENSE file for the fine print.
 
 ---
