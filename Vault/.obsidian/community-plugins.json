@@ -1,12 +1,12 @@
 [
+  "word-smith",
+  "obsidian-style-settings",
   "storyline",
   "simple-banner",
+  "quickadd",
   "obsidian-linter",
   "obsidian-languagetool-plugin",
-  "calendar",
-  "beautytasks",
-  "cursor-smith",
+  "cmdr",
   "obsidian-icon-folder",
-  "quickadd",
-  "note-mover-shortcut"
+  "beautytasks"
 ]

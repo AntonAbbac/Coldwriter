@@ -32,8 +32,13 @@ settings:
     format: hex
     default: '#ddeeff'
 
+  - id: ul2-prose-font
+    title: "Prose Font (Manuscript Body)"
+    type: variable-text
+    default: "'Literata', 'Charter', 'Georgia', 'Iowan Old Style', serif"
+
   - id: ul2-typewriter-font
-    title: Typewriter Font (Writing)
+    title: "Monospace Font (Code, Tables)"
     type: variable-text
     default: "'Courier New', 'IBM Plex Mono', Consolas, monospace"
 
@@ -94,176 +99,41 @@ settings:
   - id: ul2-letter-spacing
     title: Letter Spacing (body)
     type: variable-number-slider
-    default: 0.02
+    default: 0.005
     min: 0
     max: 0.12
     step: 0.005
 
-  - id: ce-cores-title
-    title: "🎨 Brutalist Explorer — Palette"
-    type: heading
-    level: 1
-    collapsed: false
-
-  - id: ce-1
-    title: "Slot 1 — Killer Queen Pink"
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#d63d76'
-    default-dark:  '#b3c9f2'
-  - id: ce-2
-    title: "Slot 2 — Metallic Gold"
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#b8862f'
-    default-dark:  '#c5b8f0'
-  - id: ce-3
-    title: "Slot 3 — Wine Red"
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#a3283f'
-    default-dark:  '#f0b8d4'
-  - id: ce-4
-    title: "Slot 4 — Pearl Pink"
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#c26b93'
-    default-dark:  '#f0d4b8'
-  - id: ce-5
-    title: "Slot 5 — Jewel Purple"
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#7a4fa0'
-    default-dark:  '#b8f0cc'
-  - id: ce-6
-    title: "Slot 6 — Light Gold"
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#d4a94a'
-    default-dark:  '#f0f0b8'
-  - id: ce-7
-    title: "Slot 7 — Coral Pink"
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#e0678f'
-    default-dark:  '#b8e8f0'
-  - id: ce-8
-    title: "Slot 8 — Deep Lilac"
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#8f5fb0'
-    default-dark:  '#e8b8f0'
-  - id: ce-9
-    title: "Slot 9 — Bronze"
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#9c6b3e'
-    default-dark:  '#f0c5b8'
-  - id: ce-10
-    title: "Slot 10 — Emerald Green"
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#1f8a6f'
-    default-dark:  '#b8f0e0'
-  - id: ce-11
-    title: "Slot 11 — Rose Quartz"
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#cf5a82'
-    default-dark:  '#d4f0b8'
-  - id: ce-12
-    title: "Slot 12 — Dark Wine"
-    type: variable-themed-color
-    format: hex
-    opacity: false
-    default-light: '#6b2c3e'
-    default-dark:  '#f0b8b8'
-
-  - id: ce-background-title
-    title: "🖼 Brutalist Explorer — Background"
-    type: heading
-    level: 1
-    collapsed: false
-  - id: ce-bg-opacity
-    title: "Fill Opacity"
+  - id: ul2-focus-dim-opacity
+    title: "Focus Mode — Inactive Line Opacity"
     type: variable-number-slider
-    default: 0.22
-    min: 0
+    default: 0.72
+    min: 0.2
     max: 1
     step: 0.02
 
-  - id: ce-shape-title
-    title: "📐 Brutalist Explorer — Shape & Spacing"
-    type: heading
-    level: 1
-    collapsed: false
-  - id: ce-radius
-    title: "Border radius (px)"
+  - id: ul2-focus-blur
+    title: "Focus Mode — Inactive Line Blur (px)"
     type: variable-number-slider
-    default: 0
+    default: 0.6
     min: 0
-    max: 20
-    step: 1
-    format: px
-  - id: ce-accent-border-width
-    title: "Sidebar Width (px)"
-    type: variable-number-slider
-    default: 6
-    min: 0
-    max: 12
-    step: 1
-    format: px
-  - id: ce-folder-gap
-    title: "Gap Between Root Folders (px)"
-    type: variable-number-slider
-    default: 8
-    min: 0
-    max: 20
-    step: 1
+    max: 2.5
+    step: 0.1
     format: px
 
-  - id: ce-typography-title
-    title: "🔤 Brutalist Explorer — Typography"
-    type: heading
-    level: 1
-    collapsed: false
-  - id: ce-folder-font-weight
-    title: "Folder Label Weight"
-    type: variable-select
-    default: '700'
-    options:
-      - label: Normal (400)
-        value: '400'
-      - label: Medium (500)
-        value: '500'
-      - label: Semibold (600)
-        value: '600'
-      - label: Bold (700)
-        value: '700'
-  - id: ce-file-font-weight
-    title: "File Label Weight"
-    type: variable-select
-    default: '600'
-    options:
-      - label: Normal (400)
-        value: '400'
-      - label: Medium (500)
-        value: '500'
-      - label: Semibold (600)
-        value: '600'
-      - label: Bold (700)
-        value: '700'
+  - id: ul2-dialogue-color
+    title: "Dialogue Highlight Color"
+    type: variable-color
+    opacity: true
+    format: hex
+    default: '#f0d87a'
+
+  - id: ul2-comment-color
+    title: "Draft Comment Color"
+    type: variable-color
+    opacity: true
+    format: hex
+    default: '#7de8d8'
 
 */
 :root {
@@ -272,16 +142,18 @@ settings:
   --ul2-frost-color:      #c8e8ff;
   --ul2-text-normal:      #ddeeff;
 
+  --ul2-prose-font:       "Literata", "Charter", "Georgia", "Iowan Old Style", serif;
   --ul2-typewriter-font:  "Courier New", "IBM Plex Mono", Consolas, monospace;
   --ul2-ui-font:          -apple-system, "Segoe UI", system-ui, sans-serif;
   --ul2-heading-font:     "Courier New", Consolas, monospace;
   --ul2-font-size:        16px;
   --ul2-line-height:      1.85;
-  --ul2-letter-spacing:   0.02em;
+  --ul2-letter-spacing:   0.005em;
 
   --ul2-max-width:        760px;
   --ul2-border-radius:    6px;
   --ul2-transition-speed: 140ms;
+  --ul2-ease-settle:      cubic-bezier(0.34, 1.56, 0.64, 1);
 
   --ul2-bg-0: #0d1821;
   --ul2-bg-1: #111e2b;
@@ -303,26 +175,10 @@ settings:
   --ul2-danger:        #f08080;
   --ul2-success:       #80e8c0;
 
-  --ce-folder-gap:          8px;
-  --ce-item-padding:        4px 12px;
-  --ce-radius:              0px;
-  --ce-accent-border-width: 6px;
-  --ce-bg-opacity:          0.22;
-  --ce-folder-font-weight:  700;
-  --ce-file-font-weight:    600;
-
-  --ce-1:  #b3c9f2;
-  --ce-2:  #c5b8f0;
-  --ce-3:  #f0b8d4;
-  --ce-4:  #f0d4b8;
-  --ce-5:  #b8f0cc;
-  --ce-6:  #f0f0b8;
-  --ce-7:  #b8e8f0;
-  --ce-8:  #e8b8f0;
-  --ce-9:  #f0c5b8;
-  --ce-10: #b8f0e0;
-  --ce-11: #d4f0b8;
-  --ce-12: #f0b8b8;
+  --ul2-focus-dim-opacity: 0.72;
+  --ul2-focus-blur:        0.6px;
+  --ul2-dialogue-color:    #f0d87a;
+  --ul2-comment-color:     #7de8d8;
 }
 
 /* DARK PALETTE */
@@ -404,7 +260,7 @@ settings:
   --radius-l: calc(var(--ul2-border-radius) * 2);
 
   /* Fonts */
-  --font-text:       var(--ul2-typewriter-font);
+  --font-text:       var(--ul2-prose-font);
   --font-interface:  var(--ul2-ui-font);
   --font-monospace:  var(--ul2-typewriter-font);
   --font-text-size:  var(--ul2-font-size);
@@ -425,8 +281,8 @@ settings:
 
 .theme-light {
   --ul2-base-bg:          #faf3ea;
-  --ul2-accent-color:     #d63d76;
-  --ul2-frost-color:      #b8862f;
+  --ul2-accent-color:     #a01d52;
+  --ul2-frost-color:      #7d5512;
   --ul2-text-normal:      #2a1a22;
 
   --ul2-bg-0: #faf3ea;
@@ -448,19 +304,6 @@ settings:
   --ul2-aurora-amber:  #b8862f;
   --ul2-danger:        #a3283f;
   --ul2-success:       #3d7a4f;
-
-  --ce-1:  #d63d76;
-  --ce-2:  #b8862f;
-  --ce-3:  #a3283f;
-  --ce-4:  #c26b93;
-  --ce-5:  #7a4fa0;
-  --ce-6:  #d4a94a;
-  --ce-7:  #e0678f;
-  --ce-8:  #8f5fb0;
-  --ce-9:  #9c6b3e;
-  --ce-10: #1f8a6f;
-  --ce-11: #cf5a82;
-  --ce-12: #6b2c3e;
 
   /* Backgrounds */
   --background-primary:              var(--ul2-bg-0);
@@ -538,7 +381,7 @@ settings:
   --radius-l: calc(var(--ul2-border-radius) * 2);
 
   /* Fonts */
-  --font-text:       var(--ul2-typewriter-font);
+  --font-text:       var(--ul2-prose-font);
   --font-interface:  var(--ul2-ui-font);
   --font-monospace:  var(--ul2-typewriter-font);
   --font-text-size:  var(--ul2-font-size);
@@ -586,18 +429,86 @@ body {
 .markdown-preview-view p:first-child { margin-top: 0; }
 
 .is-live-preview .cm-line {
-  transition: opacity var(--ul2-transition-speed) ease;
+  transition: opacity var(--ul2-transition-speed) ease,
+              filter  var(--ul2-transition-speed) ease;
 }
 .markdown-source-view.mod-cm6.is-focused .cm-line:not(.cm-active) {
-  opacity: 0.72;
+  opacity: var(--ul2-focus-dim-opacity);
+  filter:  blur(var(--ul2-focus-blur));
 }
 .markdown-source-view.mod-cm6.is-focused .cm-line.cm-active {
   opacity: 1;
+  filter:  blur(0px);
+}
+
+/* BREATHING CURSOR
+   A smooth opacity fade instead of the OS default hard on/off blink —
+   reads as "alive" rather than a static line sitting on the page. */
+
+@keyframes ul2-breathe {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.25; }
 }
 
 .cm-editor .cm-cursor,
 .cm-editor .cm-cursor-primary {
   border-left: 2.5px solid var(--caret-color);
+  animation: ul2-breathe 1.6s ease-in-out infinite;
+}
+/* Obsidian re-adds its own blink timing via inline style on focus;
+   this override keeps the breathing curve in charge. */
+.cm-editor.cm-focused .cm-cursor-primary {
+  animation-play-state: running;
+}
+
+/* TYPEWRITER SCROLLING
+   Keeps the active line vertically centered in the pane, like a
+   physical typewriter carriage — the page moves, not your eyes.
+   Works with core "Typewriter scroll" setting or the Cycle plugin;
+   this just adds generous top/bottom padding so centering has room. */
+
+.markdown-source-view.mod-cm6 .cm-sizer {
+  padding-top:    40vh;
+  padding-bottom: 40vh;
+}
+.is-zen .markdown-source-view.mod-cm6 .cm-sizer {
+  padding-top:    38vh;
+  padding-bottom: 38vh;
+}
+
+/* DIALOGUE HIGHLIGHTING
+   Straight or curly double quotes get a warm tint so spoken lines
+   are scannable at a glance while drafting or revising. Em/en-dash
+   led dialogue (common in some styles) is tinted too. */
+
+.markdown-preview-view p:has(> :first-child:is(q)),
+.cm-line:has(.cm-quote) {
+  --_dialogue-tint: color-mix(in srgb, var(--ul2-dialogue-color) 85%, var(--ul2-text-normal));
+}
+
+.markdown-rendered p > q,
+.markdown-rendered q {
+  color: color-mix(in srgb, var(--ul2-dialogue-color) 85%, var(--ul2-text-normal));
+}
+
+/* Em/en-dash dialogue: highlight the whole paragraph faintly when it
+   opens with a dash — common in literary dialogue formatting. */
+.markdown-preview-view p:has(> em:first-child, > strong:first-child) {
+  border-left: 2px solid transparent;
+}
+
+/* DRAFT COMMENTS
+   Obsidian %% comment %% syntax gets its own quiet color so notes-
+   to-self read as clearly separate from the manuscript text. */
+
+.cm-comment,
+mark.comment,
+.markdown-rendered .comment {
+  color:      color-mix(in srgb, var(--ul2-comment-color) 75%, var(--ul2-text-normal));
+  background: color-mix(in srgb, var(--ul2-comment-color) 8%, transparent);
+  border-radius: 3px;
+  font-style: italic;
+  padding: 0 0.2em;
 }
 
 .cm-header-1, .markdown-rendered h1, .markdown-preview-view h1 {
@@ -664,6 +575,24 @@ body {
 .view-content,
 .cm-editor {
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ul2-frost-color) 8%, transparent);
+}
+
+/* PAPER GRAIN
+   A near-invisible noise layer over the editor surface — the
+   difference between a screen and a page. Kept at ~2.5% opacity
+   and set to not intercept clicks/selection. */
+.cm-editor {
+  position: relative;
+}
+.cm-editor::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.025;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 /* Ribbon */
@@ -749,8 +678,8 @@ body {
   text-decoration: none;
   border-bottom: 1px solid var(--ul2-ice-medium);
   transition:
-    color       var(--ul2-transition-speed) ease,
-    border-color var(--ul2-transition-speed) ease;
+    color       var(--ul2-transition-speed) var(--ul2-ease-settle),
+    border-color var(--ul2-transition-speed) var(--ul2-ease-settle);
 }
 .markdown-rendered a:hover,
 .cm-hmd-internal-link:hover {
@@ -806,12 +735,14 @@ body {
   padding:       0.1em 0.55em;
   text-decoration: none;
   transition:
-    background var(--ul2-transition-speed) ease,
-    color      var(--ul2-transition-speed) ease;
+    background var(--ul2-transition-speed) var(--ul2-ease-settle),
+    color      var(--ul2-transition-speed) var(--ul2-ease-settle),
+    transform  var(--ul2-transition-speed) var(--ul2-ease-settle);
 }
 .tag:hover, a.tag:hover {
   background: color-mix(in srgb, var(--ul2-accent-color) 18%, transparent);
   color:      var(--ul2-frost-color);
+  transform:  translateY(-1px);
 }
 
 /* TABLES */
@@ -897,9 +828,16 @@ button.mod-cta, .button.mod-cta {
   font-size:     0.85em;
   font-weight:   500;
   letter-spacing: 0.04em;
-  transition:    background var(--ul2-transition-speed) ease;
+  transition:    background var(--ul2-transition-speed) var(--ul2-ease-settle),
+                 transform  var(--ul2-transition-speed) var(--ul2-ease-settle);
 }
-button.mod-cta:hover, .button.mod-cta:hover { background: color-mix(in srgb, var(--ul2-accent-color) 22%, transparent); }
+button.mod-cta:hover, .button.mod-cta:hover {
+  background: color-mix(in srgb, var(--ul2-accent-color) 22%, transparent);
+  transform:  translateY(-1px);
+}
+button.mod-cta:active, .button.mod-cta:active {
+  transform: translateY(0px) scale(0.98);
+}
 button.mod-warning { border-color: color-mix(in srgb, var(--ul2-danger) 45%, transparent); color: var(--ul2-danger); }
 
 /* CHECKBOXES (tasks) */
@@ -944,9 +882,15 @@ button.mod-warning { border-color: color-mix(in srgb, var(--ul2-danger) 45%, tra
 }
 
 .status-bar-item.plugin-word-count {
-  font-family: var(--ul2-ui-font);
-  color: var(--ul2-frost-color);
-  font-weight: 500;
+  font-family:    var(--ul2-ui-font);
+  color:          var(--ul2-frost-color);
+  font-weight:    600;
+  font-size:      11px;
+  letter-spacing: 0.03em;
+  background:     color-mix(in srgb, var(--ul2-accent-color) 10%, transparent);
+  border:         1px solid color-mix(in srgb, var(--ul2-accent-color) 22%, transparent);
+  border-radius:  10px;
+  padding:        0.15em 0.7em;
 }
 
 /* READING VIEW */
@@ -956,258 +900,29 @@ button.mod-warning { border-color: color-mix(in srgb, var(--ul2-danger) 45%, tra
   margin:    0 auto;
 }
 
-/* GRAPH VIEW */
+/* FILE EXPLORER (quiet, single-accent — matches the writing palette) */
 
-.graph-view.color-fill            { color: color-mix(in srgb, var(--ul2-accent-color) 60%, transparent); }
-.graph-view.color-fill-highlight  { color: color-mix(in srgb, var(--ul2-frost-color) 100%, transparent); }
-.graph-view.color-line            { color: color-mix(in srgb, var(--ul2-frost-color) 30%, transparent); }
-.graph-view.color-line-highlight  { color: color-mix(in srgb, var(--ul2-accent-color) 70%, transparent); }
-.graph-view.color-text            { color: color-mix(in srgb, var(--ul2-text-normal) 90%, transparent); }
-.graph-view.color-fill-attachment { color: rgba(125, 232, 216, 0.55); }
-.graph-view.color-fill-tag        { color: rgba(184, 160, 240, 0.60); }
-.graph-view.color-fill-unresolved { color: rgba(100, 140, 180, 0.40); }
-.graph-view.color-arrow           { color: color-mix(in srgb, var(--ul2-accent-color) 35%, transparent); }
-
-/* BRUTALIST FILE EXPLORER */
-
-.nav-files-container > div > .nav-folder { --ce-color: var(--ce-1); margin-bottom: var(--ce-folder-gap); }
-.nav-files-container > div > .nav-folder:nth-child(12n+1)  { --ce-color: var(--ce-1);  }
-.nav-files-container > div > .nav-folder:nth-child(12n+2)  { --ce-color: var(--ce-2);  }
-.nav-files-container > div > .nav-folder:nth-child(12n+3)  { --ce-color: var(--ce-3);  }
-.nav-files-container > div > .nav-folder:nth-child(12n+4)  { --ce-color: var(--ce-4);  }
-.nav-files-container > div > .nav-folder:nth-child(12n+5)  { --ce-color: var(--ce-5);  }
-.nav-files-container > div > .nav-folder:nth-child(12n+6)  { --ce-color: var(--ce-6);  }
-.nav-files-container > div > .nav-folder:nth-child(12n+7)  { --ce-color: var(--ce-7);  }
-.nav-files-container > div > .nav-folder:nth-child(12n+8)  { --ce-color: var(--ce-8);  }
-.nav-files-container > div > .nav-folder:nth-child(12n+9)  { --ce-color: var(--ce-9);  }
-.nav-files-container > div > .nav-folder:nth-child(12n+10) { --ce-color: var(--ce-10); }
-.nav-files-container > div > .nav-folder:nth-child(12n+11) { --ce-color: var(--ce-11); }
-.nav-files-container > div > .nav-folder:nth-child(12n+12) { --ce-color: var(--ce-12); }
-
-.nav-files-container > div > .nav-folder :is(.nav-folder-title, .nav-file-title) {
-  --_fill:        color-mix(in srgb, var(--ce-color) calc(var(--ce-bg-opacity) * 100%), transparent);
-  --_fill-hover:  color-mix(in srgb, var(--ce-color) 32%, transparent);
-  --_fill-active: color-mix(in srgb, var(--ce-color) 42%, transparent);
-  --_bar-dim:     color-mix(in srgb, var(--ce-color) 45%, transparent);
-  color:            var(--ce-color);
-  background-color: var(--_fill);
-  border-radius:    var(--ce-radius);
-  padding:          var(--ce-item-padding);
-}
-
-.theme-dark .nav-files-container > div > .nav-folder :is(.nav-folder-title, .nav-file-title) {
-  --_fill:        color-mix(in srgb, var(--ce-color) 14%, transparent);
-  --_fill-active: color-mix(in srgb, var(--ce-color) 28%, transparent);
-}
-
-.nav-files-container > div > .nav-folder .nav-folder-title {
-  border-left: var(--ce-accent-border-width) solid var(--ce-color);
-  font-weight: var(--ce-folder-font-weight);
-}
-.nav-files-container > div > .nav-folder .nav-file-title {
-  border-left: var(--ce-accent-border-width) solid var(--_bar-dim);
-  font-weight: var(--ce-file-font-weight);
-}
-
-/* Folder icon */
-.nav-files-container > div > .nav-folder .nav-folder-title :is(.nav-folder-collapse-indicator, svg) {
-  color: var(--ce-color);
-}
-
-/* Hover */
-.nav-files-container > div > .nav-folder :is(.nav-folder-title, .nav-file-title):hover {
-  background-color: var(--_fill-hover);
-  border-left-color: var(--ce-color);
-}
-
-/* Active / selected */
-.nav-files-container > div > .nav-folder :is(.nav-file-title, .nav-folder-title).is-active {
-  background-color:  var(--_fill-active);
-  color:             var(--ce-color);
-  border-left-color: var(--ce-color);
-  border-left-width: 8px;
-  font-weight:       700;
-}
-
-/* KANBAN PLUGIN */
-
-.kanban-plugin__board { background: var(--ul2-bg-0); padding: 1em; }
-
-.kanban-plugin__lane-header-wrapper {
-  background:    color-mix(in srgb, var(--ul2-accent-color) 7%, transparent);
-  border:        1px solid var(--ul2-border-faint);
-  border-radius: var(--ul2-border-radius) var(--ul2-border-radius) 0 0;
-  padding:       0.5em 0.8em;
+.nav-folder-title, .nav-file-title {
+  border-radius: 4px;
+  padding:       2px 8px;
   font-family:   var(--ul2-ui-font);
-  font-size:     0.8em;
-  font-weight:   600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color:         var(--ul2-accent-color);
-}
-
-.kanban-plugin__lane {
-  background:    color-mix(in srgb, var(--ul2-accent-color) 3%, transparent);
-  border:        1px solid var(--ul2-border-faint);
-  border-top:    none;
-  border-radius: 0 0 var(--ul2-border-radius) var(--ul2-border-radius);
-  min-width:     260px;
-  max-width:     300px;
-}
-.kanban-plugin__lane.is-drop-target { border-color: var(--ul2-border-glow); }
-
-.kanban-plugin__item-content-wrapper {
-  background:    var(--ul2-bg-2);
-  border:        1px solid var(--ul2-border-faint);
-  border-radius: var(--ul2-border-radius);
-  box-shadow:    0 1px 4px color-mix(in srgb, var(--ul2-text-normal) 35%, transparent);
-  font-family:   var(--ul2-typewriter-font);
-  font-size:     0.93em;
-}
-.kanban-plugin__item-content-wrapper:hover { border-color: var(--ul2-border-soft); }
-
-.kanban-plugin__item-tag {
-  background:    color-mix(in srgb, var(--ul2-accent-color) 10%, transparent);
-  border:        1px solid color-mix(in srgb, var(--ul2-accent-color) 22%, transparent);
-  border-radius: 4px;
-  color:         var(--ul2-accent-color);
-  font-size:     0.75em;
-  letter-spacing: 0.03em;
-}
-
-/* QUICKADD PLUGIN */
-
-.quickadd-modal, .qm-modal {
-  background:    var(--ul2-bg-1);
-  border:        1px solid var(--ul2-border-soft);
-  border-radius: var(--ul2-border-radius);
-  box-shadow:    0 12px 40px color-mix(in srgb, var(--ul2-text-normal) 75%, transparent);
-}
-.quickadd-modal .prompt-input, .qm-input {
-  font-family: var(--ul2-typewriter-font);
-  background:  color-mix(in srgb, var(--ul2-accent-color) 5%, transparent);
-  border:      1px solid var(--ul2-border-faint);
-  border-radius: 4px;
-  color:       var(--ul2-text-normal);
-  font-size:   1em;
-}
-.quickadd-modal .prompt-input:focus, .qm-input:focus {
-  border-color: var(--ul2-border-glow);
-  outline:      none;
-}
-
-/* NOTEBOOK NAVIGATOR */
-
-.notebook-navigator, .nn-container { font-family: var(--ul2-ui-font); }
-
-.notebook-navigator .tree-item-self, .nn-file-item {
-  border-radius: 4px;
   font-size:     13px;
-  padding:       2px 6px;
-  letter-spacing: 0.02em;
+  transition:    background var(--ul2-transition-speed) var(--ul2-ease-settle),
+                 color      var(--ul2-transition-speed) var(--ul2-ease-settle);
 }
-.notebook-navigator .tree-item-self:hover, .nn-file-item:hover {
+.nav-folder-title:hover, .nav-file-title:hover {
   background: var(--ul2-ice-faint);
   color:      var(--ul2-frost-color);
 }
-.notebook-navigator .tree-item-self.is-selected, .nn-file-item.is-selected {
-  background:  color-mix(in srgb, var(--ul2-accent-color) 14%, transparent);
+.nav-file-title.is-active, .nav-folder-title.is-active {
+  background:  color-mix(in srgb, var(--ul2-accent-color) 16%, transparent);
   color:       var(--ul2-frost-color);
   border-left: 2px solid var(--ul2-accent-color);
+  font-weight: 600;
 }
-.notebook-navigator .nav-folder-title, .nn-section-header {
-  font-family:   var(--ul2-ui-font);
-  font-size:     0.75em;
-  font-weight:   600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color:         var(--text-faint);
-  padding-top:   0.8em;
+.nav-folder-title .nav-folder-collapse-indicator {
+  color: var(--text-faint);
 }
-
-/* BANNER PLUGIN */
-
-.obsidian-banner-wrapper::after {
-  content:  "";
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height:   60%;
-  background: linear-gradient(to top, color-mix(in srgb, var(--ul2-base-bg) 85%, transparent) 0%, color-mix(in srgb, var(--ul2-base-bg) 40%, transparent) 60%, transparent 100%);
-  pointer-events: none;
-}
-.obsidian-banner-wrapper img, .banner-image {
-  filter:        saturate(0.7) brightness(0.8) hue-rotate(185deg);
-  border-radius: 0 0 var(--ul2-border-radius) var(--ul2-border-radius);
-  transition:    filter 400ms ease;
-}
-.obsidian-banner-wrapper:hover img, .banner-image:hover {
-  filter: saturate(0.85) brightness(0.9) hue-rotate(180deg);
-}
-.theme-light .obsidian-banner-wrapper img,
-.theme-light .banner-image {
-  filter: saturate(0.85) brightness(1.05) hue-rotate(-15deg);
-}
-.theme-light .obsidian-banner-wrapper:hover img,
-.theme-light .banner-image:hover {
-  filter: saturate(0.95) brightness(1.1) hue-rotate(-10deg);
-}
-.obsidian-banner-wrapper .banner-header .inline-title,
-.obsidian-banner-wrapper .obsidian-banner-header-title {
-  font-family:   var(--ul2-heading-font);
-  color:         color-mix(in srgb, var(--ul2-text-normal) 98%, transparent);
-  letter-spacing: 0.04em;
-}
-
-/* DATAVIEW PLUGIN */
-
-.dataview.table-view-table { border-collapse: collapse; width: 100%; font-family: var(--ul2-ui-font); font-size: 0.88em; }
-
-.dataview.table-view-table th {
-  background:     color-mix(in srgb, var(--ul2-accent-color) 8%, transparent);
-  border-bottom:  1px solid var(--ul2-border-soft);
-  color:          var(--ul2-frost-color);
-  font-size:      0.8em;
-  font-weight:    600;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  padding:        0.55em 0.9em;
-  text-align:     left;
-}
-.dataview.table-view-table td {
-  border-bottom: 1px solid var(--ul2-border-faint);
-  padding:       0.48em 0.9em;
-  font-family:   var(--ul2-typewriter-font);
-  vertical-align: middle;
-}
-.dataview.table-view-table tr:hover td { background: color-mix(in srgb, var(--ul2-accent-color) 5%, transparent); }
-
-.dataview.list-view-ul { list-style: none; padding: 0; margin: 0; }
-.dataview.list-view-ul li {
-  border-bottom: 1px solid var(--ul2-border-faint);
-  padding:       0.35em 0;
-  font-family:   var(--ul2-typewriter-font);
-  font-size:     0.93em;
-  color:         var(--text-muted);
-}
-.dataview.list-view-ul li:last-child { border-bottom: none; }
-
-.dataview-inline-field-key {
-  background:    color-mix(in srgb, var(--ul2-accent-color) 10%, transparent);
-  border:        1px solid color-mix(in srgb, var(--ul2-accent-color) 20%, transparent);
-  border-radius: 4px;
-  color:         var(--ul2-accent-color);
-  font-family:   var(--ul2-ui-font);
-  font-size:     0.8em;
-  font-weight:   500;
-  letter-spacing: 0.04em;
-  padding:       0 0.4em;
-}
-.dataview-inline-field-value {
-  color:       var(--ul2-text-normal);
-  font-family: var(--ul2-typewriter-font);
-  font-size:   0.9em;
-}
-.dataview input[type="checkbox"] { accent-color: var(--ul2-accent-color); width: 14px; height: 14px; }
 
 /* ACCESSIBILITY & MOBILE */
 
@@ -1216,6 +931,7 @@ button.mod-warning { border-color: color-mix(in srgb, var(--ul2-danger) 45%, tra
     --ul2-transition-speed: 0ms;
   }
   * { transition-duration: 0ms; animation-duration: 0ms; }
+  .cm-editor .cm-cursor-primary { animation: none; opacity: 1; }
 }
 
 @media screen and (max-width: 768px) {
@@ -1223,5 +939,4 @@ button.mod-warning { border-color: color-mix(in srgb, var(--ul2-danger) 45%, tra
     --ul2-font-size: 15px;
     --ul2-max-width: 100%;
   }
-  .kanban-plugin__lane { min-width: 220px; max-width: 260px; }
 }

@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiCheckCircle",
       "LiPenTool",
       "LiPersonStanding",
       "LiBoxes",
-      "LiBrain",
-      "LiNotebook"
+      "LiBrain"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -36,7 +36,9 @@
   },
   "00 System": "LiToolCase",
   "10 Journal": "LiNotebook",
-  "20 Brain": "LiBrain",
+  "20 Projects": "LiBoxes",
+  "10 Brain": "LiBrain",
+  "20 Writing": "LiPenTool",
   "30 Projects": "LiBoxes",
-  "40 Writing": "LiPenTool"
+  "40 Tasks": "LiCheckCircle"
 }

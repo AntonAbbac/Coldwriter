@@ -4,13 +4,14 @@ function: index
 status: "{{VALUE:Status (planning/active/paused/done):planning}}"
 priority: "{{VALUE:Priority (low/medium/high/critical):medium}}"
 created:
-  {{date}}
+  "{{date}}":
 modified:
-  {{date}}
+  "{{date}}":
 area: "{{VALUE:Area (writing/studies/health/finance/personal):}}"
-deadline: "{{VALUE:Deadline (YYYY-MM-DD, leave blank if none):}}"
+deadline: "{{vdate:Pick a deadline}}":
 people: "{{VALUE:People involved (leave blank if solo):}}"
 project: "{{VALUE:Parent project (leave blank if top-level):}}"
+nav_hidden: true
 ---
 
 # {{title}}

@@ -1,6 +1,6 @@
 ---
 type: dashboard
-status: active
+status: Active
 created: 2026-05-19
 modified: 2026-07-18
 banner: "![[blue_castle.png]]"

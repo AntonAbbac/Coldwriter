@@ -1,7 +1,6 @@
 {
-  "itemsFolder": "10 Journal/Routine & Ops",
+  "itemsFolder": "40 Tasks",
   "projectsFolder": "30 Projects",
-  "filtersFolder": "BeautyTasks/Filters",
   "attachmentsFolder": "00 System/Attachments",
   "knownLabels": [
     "fleeting",
@@ -24,6 +23,7 @@
     "2",
     "85",
     "draft",
+    "anton",
     "literature",
     "outward",
     "article",
@@ -34,12 +34,16 @@
     "remake",
     "renew",
     "new-info",
+    "enem",
     "estudos",
     "shape",
     "ingles",
     "language",
     "connect",
     "analisys",
+    "malignant",
+    "narcisism",
+    "psychopath",
     "flashcards",
     "game",
     "anime",
@@ -49,6 +53,7 @@
     "command",
     "leader",
     "leadership",
+    "Harmful",
     "Overkill",
     "site",
     "writing",
@@ -56,6 +61,7 @@
     "trash",
     "task,-now",
     "explosion",
+    "insanity",
     "rupture",
     "toreview",
     "biologia",
@@ -100,22 +106,18 @@
     "treino",
     "upper",
     "vocabulario",
+    "yagami",
     "back-end",
     "definicao",
     "entrega",
     "front-end",
+    "miguel",
+    "mirella",
+    "rafael",
     "seguranca",
     "testes",
     "todos"
   ],
-  "visibleLabels": [],
-  "labelColors": {},
-  "locale": "auto",
-  "fontTaskPct": 100,
-  "fontNavPct": 100,
-  "fontHeadingPct": 100,
-  "fontSectionPct": 100,
-  "showDescriptionInList": true,
   "metaTheme": "colorado",
   "metaColors": {
     "far": "#000000",
@@ -128,22 +130,8 @@
     "parent": "#000000",
     "backlink": "#000000"
   },
-  "navCollapsed": {
-    "projects": false,
-    "areas": false,
-    "labels": false,
-    "filters": true
-  },
-  "startView": "heute",
-  "lastView": "wiederkehrend",
-  "parseNaturalLanguage": true,
-  "showUnfiledInInbox": true,
-  "excludeFolders": [],
   "chipsIconsOnly": true,
-  "boardLayout": "list",
-  "reminderLastScan": 0,
   "didInitialSetup": true,
-  "showParentMarker": false,
   "statuses": [
     {
       "id": "todo",
@@ -191,15 +179,11 @@
     "removeEventOnComplete": false,
     "excludeInbox": false,
     "notifyConflicts": false,
-    "showStatusBar": true,
-    "account": null,
-    "tokens": null,
-    "lastSynced": {},
-    "syncTokens": {}
+    "showStatusBar": true
   },
   "didDescriptionMigration": true,
   "didInboxRemoval": true,
-  "lastSeenVersion": "1.26.1",
+  "lastSeenVersion": "1.46.3",
   "pageViewOptions": {
     "heute": {
       "layout": "list",
@@ -222,25 +206,26 @@
   },
   "boardColumnOrder": {
     "label": [
-      "chatgpt",
-      "ChatGPT",
-      "permanent",
-      "reflection",
-      "review",
-      "routine",
-      "system",
-      "urgent",
-      "vital",
-      "war",
-      "fleeting",
-      "habits"
+      "diagnostico",
+      "enem",
+      "fase1",
+      "meta",
+      "redacao",
+      "Estudos"
+    ],
+    "status": [
+      "done",
+      "todo",
+      "doing",
+      "loser"
     ]
   },
   "gcalFeed": {
     "enabled": false,
     "calendars": {},
     "hideDeclined": true,
-    "upcomingMonths": 1,
-    "snapshot": []
-  }
+    "upcomingMonths": 1
+  },
+  "didTitleMigration": true,
+  "schemaVersion": 4
 }
